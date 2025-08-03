@@ -82,7 +82,7 @@ const HeroSection = () => {
                 baseIntensity={0.2} 
                 hoverIntensity={0.5} 
                 enableHover={true}
-                fontSize="clamp(1.5rem, 4vw, 3rem)"
+                fontSize="clamp(2rem, 6vw, 5rem)"
                 fontWeight="900"
                 color="#ffffff"
               >
