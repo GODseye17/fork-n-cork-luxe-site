@@ -16,7 +16,7 @@ const ContactSection = () => {
     {
       icon: Phone,
       title: 'Phone',
-      details: ['+91 9876543210', '+91 9876543211'],
+      details: ['+91 7903344985', '+91 7004219166'],
       action: 'Call Now'
     },
     {
