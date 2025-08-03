@@ -10,8 +10,22 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      {/* Background Video */}
+      <video 
+        className="absolute inset-0 w-full h-full object-cover"
+        autoPlay 
+        loop 
+        muted 
+        playsInline
+      >
+        <source src="/lovable-uploads/whiskey ATTPAC.webm" type="video/webm" />
+      </video>
+      
+      {/* Dark Overlay for Better Text Readability */}
+      <div className="absolute inset-0 bg-luxury-black/60" />
+      
       {/* Toned Down Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-luxury-black via-primary/15 to-luxury-black" />
+      <div className="absolute inset-0 bg-gradient-to-br from-luxury-black/40 via-primary/10 to-luxury-black/40" />
       
       {/* Radial Glow Effect Behind Logo */}
       <div className="absolute inset-0">
