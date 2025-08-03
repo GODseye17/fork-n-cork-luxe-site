@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import MagnetLines from './MagnetLines';
+import ShinyText from './ShinyText';
 
 
 const HeroSection = () => {
@@ -82,12 +83,14 @@ const HeroSection = () => {
             </h1>
 
             {/* Subtitle */}
-            <p className={`font-body text-base md:text-lg text-soft-gray mb-8 leading-relaxed tracking-wide transition-all duration-800 delay-500 ${
+            <div className={`font-body text-base md:text-lg mb-8 leading-relaxed tracking-wide transition-all duration-800 delay-500 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}>
-              Experience luxury dining in the heart of Ranchi. Premium cocktails, gourmet cuisine, 
-              and live entertainment in an atmosphere of timeless elegance.
-            </p>
+              <ShinyText 
+                text="Experience luxury dining in the heart of Ranchi. Premium cocktails, gourmet cuisine, and live entertainment in an atmosphere of timeless elegance." 
+                speed={4}
+              />
+            </div>
 
             {/* CTA Buttons */}
             <div className={`flex flex-col sm:flex-row gap-4 transition-all duration-800 delay-600 ${

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import ShinyText from './ShinyText';
 
 const MenuPreview = () => {
   const [activeCategory, setActiveCategory] = useState('signature');
@@ -84,10 +85,12 @@ const MenuPreview = () => {
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
             Our <span className="text-gradient-gold">Curated</span> Menu
           </h2>
-          <p className="font-body text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Each dish and drink is a masterpiece, carefully crafted by our culinary artists 
-            using the finest ingredients from around the world.
-          </p>
+          <div className="font-body text-lg max-w-3xl mx-auto leading-relaxed">
+            <ShinyText 
+              text="Each dish and drink is a masterpiece, carefully crafted by our culinary artists using the finest ingredients from around the world."
+              speed={4}
+            />
+          </div>
         </div>
 
         {/* Category Tabs */}
@@ -129,9 +132,9 @@ const MenuPreview = () => {
                 <h3 className="font-display text-xl font-semibold text-foreground mb-3">
                   {item.name}
                 </h3>
-                <p className="font-body text-muted-foreground mb-4 leading-relaxed text-sm">
-                  {item.description}
-                </p>
+                <div className="font-body mb-4 leading-relaxed text-sm">
+                  <ShinyText text={item.description} speed={6} />
+                </div>
                 <div className="text-2xl font-bold text-gradient-gold mb-6">
                   {item.price}
                 </div>
@@ -158,9 +161,9 @@ const MenuPreview = () => {
           >
             Start Ordering Now
           </a>
-          <p className="font-body text-muted-foreground mt-4">
-            Order online for pickup or delivery - Experience Fork N Cork at home
-          </p>
+          <div className="font-body mt-4">
+            <ShinyText text="Order online for pickup or delivery - Experience Fork N Cork at home" speed={5} />
+          </div>
         </div>
       </div>
     </section>

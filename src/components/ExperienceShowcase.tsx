@@ -3,6 +3,7 @@ import { Wine, UtensilsCrossed, Music } from 'lucide-react';
 import cocktailImage from '@/assets/premium-cocktail.jpg';
 import dishImage from '@/assets/gourmet-dish.jpg';
 import entertainmentImage from '@/assets/live-entertainment.jpg';
+import ShinyText from './ShinyText';
 
 const ExperienceShowcase = () => {
   const experiences = [
@@ -37,10 +38,12 @@ const ExperienceShowcase = () => {
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
             The <span className="text-gradient-gold">Fork N Cork</span> Experience
           </h2>
-          <p className="font-body text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Immerse yourself in a world where every detail is crafted to perfection. 
-            From our signature cocktails to our gourmet cuisine and live entertainment.
-          </p>
+          <div className="font-body text-lg max-w-3xl mx-auto leading-relaxed">
+            <ShinyText 
+              text="Immerse yourself in a world where every detail is crafted to perfection. From our signature cocktails to our gourmet cuisine and live entertainment."
+              speed={4}
+            />
+          </div>
         </div>
 
         {/* Experience Cards */}
@@ -71,9 +74,9 @@ const ExperienceShowcase = () => {
                 <h3 className="font-display text-2xl font-semibold text-foreground mb-4">
                   {experience.title}
                 </h3>
-                <p className="font-body text-muted-foreground mb-6 leading-relaxed">
-                  {experience.description}
-                </p>
+                <div className="font-body mb-6 leading-relaxed">
+                  <ShinyText text={experience.description} speed={5} />
+                </div>
 
                 {/* Features */}
                 <div className="flex flex-wrap justify-center gap-2 mb-6">
