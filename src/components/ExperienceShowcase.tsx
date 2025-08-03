@@ -33,7 +33,7 @@ const ExperienceShowcase = () => {
   ];
 
   return (
-    <section className="py-20" style={{ backgroundColor: '#FCFFFF' }}>
+    <section className="py-20" style={{ backgroundColor: '#F1F2EE' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 scroll-reveal">
