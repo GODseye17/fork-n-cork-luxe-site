@@ -29,11 +29,15 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				
-				// Luxury Brand Colors
-				'forest-green': 'hsl(var(--forest-green))',
-				'champagne-gold': 'hsl(var(--champagne-gold))',
-				'luxury-black': 'hsl(var(--luxury-black))',
-				'luxury-white': 'hsl(var(--luxury-white))',
+				// Fork N Cork Luxury Colors
+				'deep-charcoal': 'hsl(var(--deep-charcoal))',
+				'rich-navy': 'hsl(var(--rich-navy))',
+				'luxury-gold': 'hsl(var(--luxury-gold))',
+				'champagne': 'hsl(var(--champagne))',
+				'rich-burgundy': 'hsl(var(--rich-burgundy))',
+				'warm-white': 'hsl(var(--warm-white))',
+				'soft-gray': 'hsl(var(--soft-gray))',
+				'dark-bronze': 'hsl(var(--dark-bronze))',
 				
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
@@ -79,12 +83,15 @@ export default {
 				'gradient-gold': 'var(--gradient-gold)',
 				'gradient-luxury': 'var(--gradient-luxury)',
 				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-amber': 'var(--gradient-amber)',
+				'gradient-backdrop': 'var(--gradient-backdrop)',
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 			},
 			boxShadow: {
 				'luxury': 'var(--shadow-luxury)',
 				'gold': 'var(--shadow-gold)',
 				'elegant': 'var(--shadow-elegant)',
+				'glass': 'var(--shadow-glass)',
 			},
 			transitionTimingFunction: {
 				'luxury': 'cubic-bezier(0.4, 0, 0.2, 1)',

@@ -9,26 +9,29 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Toned Down Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-luxury-black via-primary/15 to-luxury-black" />
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-deep-charcoal">
+      {/* Sophisticated Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-primary" />
       
-      {/* Radial Glow Effect Behind Logo */}
+      {/* Texture Overlay */}
+      <div className="absolute inset-0 texture-marble opacity-40" />
+      
+      {/* Ambient Lighting Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-radial from-accent/10 via-accent/2 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-radial from-luxury-gold/10 via-luxury-gold/3 to-transparent rounded-full blur-3xl glow-gold"></div>
       </div>
       
-      {/* Elegant Pattern Overlay */}
-      <div className="absolute inset-0 opacity-5">
+      {/* Elegant Golden Pattern Overlay */}
+      <div className="absolute inset-0 opacity-8">
         <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 30% 40%, hsl(var(--champagne-gold)) 1px, transparent 1px), radial-gradient(circle at 70% 70%, hsl(var(--champagne-gold)) 1px, transparent 1px)`,
-          backgroundSize: '60px 60px, 80px 80px'
+          backgroundImage: `radial-gradient(circle at 30% 40%, hsl(var(--luxury-gold)) 1px, transparent 1px), radial-gradient(circle at 70% 70%, hsl(var(--champagne)) 1px, transparent 1px)`,
+          backgroundSize: '80px 80px, 120px 120px'
         }} />
       </div>
 
-      {/* Subtle Corner Accents */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-accent/5 to-transparent rounded-full blur-2xl"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tl from-primary/10 to-transparent rounded-full blur-3xl"></div>
+      {/* Sophisticated Corner Accents */}
+      <div className="absolute top-0 left-0 w-80 h-80 bg-gradient-to-br from-champagne/8 to-transparent rounded-full blur-3xl glow-burgundy"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-rich-burgundy/12 to-transparent rounded-full blur-3xl"></div>
 
       {/* Small Whiskey Video Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -86,9 +89,9 @@ const HeroSection = () => {
             isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
           }`}>
             <div className="relative w-full max-w-sm aspect-square overflow-hidden mt-8">
-              {/* Glossy Border Container */}
-              <div className="relative p-1 rounded-3xl bg-gradient-to-br from-accent/60 via-luxury-white/40 to-accent/60">
-                <div className="relative rounded-[20px] overflow-hidden bg-gradient-to-br from-luxury-black/20 to-luxury-black/40 backdrop-blur-sm">
+              {/* Glass Morphism Border Container */}
+              <div className="relative p-1 rounded-3xl bg-gradient-to-br from-luxury-gold/40 via-champagne/30 to-luxury-gold/40 glow-gold">
+                <div className="relative rounded-[20px] overflow-hidden glass-morphism">
                   {/* Logo Video */}
                   <video 
                     className="w-full h-full object-cover scale-110"
@@ -112,15 +115,15 @@ const HeroSection = () => {
             isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
           }`}>
             {/* Tagline */}
-            <h1 className={`font-display text-2xl md:text-4xl lg:text-5xl font-bold text-luxury-white mb-6 leading-tight transition-all duration-800 delay-300 ${
+            <h1 className={`font-display text-2xl md:text-4xl lg:text-5xl font-light text-warm-white mb-6 leading-tight tracking-wide transition-all duration-800 delay-300 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}>
               Where Culinary Art
-              <span className="block text-gradient-gold">Meets Liquid Poetry</span>
+              <span className="block text-gradient-gold font-normal">Meets Liquid Poetry</span>
             </h1>
 
             {/* Subtitle */}
-            <p className={`font-body text-base md:text-lg text-luxury-white/90 mb-8 leading-relaxed transition-all duration-800 delay-500 ${
+            <p className={`font-body text-base md:text-lg text-soft-gray mb-8 leading-relaxed tracking-wide transition-all duration-800 delay-500 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}>
               Experience luxury dining in the heart of Ranchi. Premium cocktails, gourmet cuisine, 

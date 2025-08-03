@@ -8,52 +8,59 @@ Inspired by Rolex's timeless elegance and sophistication
 
 @layer base {
   :root {
-    /* Core Brand Colors - HSL Format */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+    /* Fork N Cork Luxury Color Palette */
+    --background: 26 26 26; /* Deep charcoal #1a1a1a */
+    --foreground: 45 12% 94%; /* Warm white #faf8f3 */
 
-    /* Luxury Color Palette */
-    --forest-green: 146 100% 20%; /* Deep forest green #006837 */
-    --champagne-gold: 45 75% 52%; /* Champagne gold #D4AF37 */
-    --luxury-black: 0 0% 0%; /* Rich black */
-    --luxury-white: 0 0% 100%; /* Crisp white */
+    /* Primary Luxury Colors */
+    --deep-charcoal: 0 0% 10%; /* #1a1a1a */
+    --rich-navy: 210 40% 8%; /* #0f1419 */
+    --luxury-gold: 45 75% 52%; /* #d4af37 */
+    --champagne: 39 85% 89%; /* #f7e7ce */
+    --rich-burgundy: 356 42% 31%; /* #722f37 */
+    --warm-white: 45 12% 94%; /* #faf8f3 */
+    --soft-gray: 0 0% 66%; /* #a8a8a8 */
+    --dark-bronze: 45 85% 30%; /* #8b6914 */
     
     /* Semantic Color Mappings */
-    --primary: 146 100% 20%; /* Forest green */
-    --primary-foreground: 0 0% 100%;
+    --primary: 356 42% 31%; /* Rich burgundy */
+    --primary-foreground: 45 12% 94%; /* Warm white */
     
-    --secondary: 45 75% 52%; /* Champagne gold */
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 45 75% 52%; /* Luxury gold */
+    --secondary-foreground: 0 0% 10%; /* Deep charcoal */
     
-    --accent: 45 75% 52%; /* Gold accent */
-    --accent-foreground: 0 0% 0%;
+    --accent: 39 85% 89%; /* Champagne */
+    --accent-foreground: 0 0% 10%; /* Deep charcoal */
     
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
+    --card: 0 0% 12%; /* Dark card background */
+    --card-foreground: 45 12% 94%; /* Warm white */
     
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 45 12% 94%;
     
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 0 0% 15%; /* Dark muted */
+    --muted-foreground: 0 0% 66%; /* Soft gray */
     
-    --border: 0 0% 90%;
-    --input: 0 0% 95%;
-    --ring: 45 75% 52%;
+    --border: 45 75% 52%; /* Gold border */
+    --input: 0 0% 15%; /* Dark input */
+    --ring: 45 75% 52%; /* Gold ring */
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    /* Luxury Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--forest-green)), hsl(var(--forest-green) / 0.8));
-    --gradient-gold: linear-gradient(135deg, hsl(var(--champagne-gold)), hsl(45 85% 60%));
-    --gradient-luxury: linear-gradient(135deg, hsl(var(--luxury-black)), hsl(0 0% 20%));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--luxury-black) / 0.7), hsl(var(--forest-green) / 0.6));
+    /* Sophisticated Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--rich-burgundy)), hsl(0 0% 0%)); /* burgundy to black */
+    --gradient-gold: linear-gradient(135deg, hsl(var(--dark-bronze)), hsl(0 0% 15%)); /* dark gold to charcoal */
+    --gradient-luxury: linear-gradient(135deg, hsl(var(--deep-charcoal)), hsl(0 0% 5%)); /* charcoal to deeper black */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--deep-charcoal) / 0.95), hsl(var(--rich-burgundy) / 0.15)); /* sophisticated overlay */
+    --gradient-amber: linear-gradient(135deg, hsl(45 75% 52%), hsl(35 60% 25%)); /* amber to brown */
+    --gradient-backdrop: linear-gradient(180deg, hsl(var(--deep-charcoal) / 0.9), hsl(var(--rich-burgundy) / 0.1));
     
-    /* Luxury Shadows */
-    --shadow-luxury: 0 25px 50px -12px hsl(var(--luxury-black) / 0.4);
-    --shadow-gold: 0 10px 30px -5px hsl(var(--champagne-gold) / 0.3);
-    --shadow-elegant: 0 4px 20px hsl(var(--luxury-black) / 0.1);
+    /* Deep Luxury Shadows */
+    --shadow-luxury: 0 10px 40px rgba(0, 0, 0, 0.5); /* Deep soft shadow */
+    --shadow-gold: 0 4px 20px hsl(var(--luxury-gold) / 0.2); /* Golden glow */
+    --shadow-elegant: 0 2px 15px rgba(0, 0, 0, 0.3); /* Subtle depth */
+    --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.37); /* Glass morphism shadow */
     
     /* Premium Typography Scale */
     --font-display: 'Playfair Display', serif;
@@ -154,9 +161,14 @@ Inspired by Rolex's timeless elegance and sophistication
     @apply relative overflow-hidden border-2 border-secondary text-secondary px-8 py-4 rounded-lg font-semibold tracking-wide transition-all duration-300 hover:bg-secondary hover:text-secondary-foreground hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent/50;
   }
 
-  /* Luxury Card Styles */
+  /* Luxury Card Styles with Glass Morphism */
   .card-luxury {
-    @apply bg-card/95 backdrop-blur-sm border border-border/20 rounded-2xl shadow-[var(--shadow-elegant)] transition-all duration-300 hover:shadow-[var(--shadow-luxury)] hover:-translate-y-2;
+    @apply bg-card/20 backdrop-blur-lg border border-secondary/20 rounded-2xl shadow-[var(--shadow-glass)] transition-all duration-300 hover:shadow-[var(--shadow-luxury)] hover:-translate-y-2 hover:bg-card/30;
+  }
+  
+  /* Glass Morphism Effect */
+  .glass-morphism {
+    @apply bg-card/10 backdrop-blur-md border border-secondary/15 rounded-xl shadow-[var(--shadow-glass)];
   }
   
   /* Gold Gradient Text */
@@ -252,5 +264,39 @@ Inspired by Rolex's timeless elegance and sophistication
   
   .bg-gradient-hero {
     background: var(--gradient-hero);
+  }
+  
+  .bg-gradient-amber {
+    background: var(--gradient-amber);
+  }
+  
+  .bg-gradient-backdrop {
+    background: var(--gradient-backdrop);
+  }
+  
+  /* Texture Overlays */
+  .texture-marble {
+    background-image: 
+      radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+  }
+  
+  .texture-leather {
+    background-image: 
+      repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(212, 175, 55, 0.02) 2px, rgba(212, 175, 55, 0.02) 4px);
+  }
+  
+  /* Ambient Lighting Effects */
+  .glow-gold {
+    box-shadow: 
+      0 0 20px rgba(212, 175, 55, 0.1),
+      0 0 40px rgba(212, 175, 55, 0.05),
+      inset 0 1px 0 rgba(212, 175, 55, 0.1);
+  }
+  
+  .glow-burgundy {
+    box-shadow: 
+      0 0 30px rgba(114, 47, 55, 0.15),
+      0 0 60px rgba(114, 47, 55, 0.05);
   }
 }
