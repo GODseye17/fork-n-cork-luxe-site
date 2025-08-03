@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import MagnetLines from './MagnetLines';
 import ShinyText from './ShinyText';
+import Aurora from './Aurora';
 
 
 const HeroSection = () => {
@@ -12,15 +13,14 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-deep-charcoal">
-      {/* Sophisticated Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-primary" />
-      
-      {/* Texture Overlay */}
-      <div className="absolute inset-0 texture-marble opacity-40" />
-      
-      {/* Ambient Lighting Effects */}
+      {/* Aurora Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-radial from-luxury-gold/10 via-luxury-gold/3 to-transparent rounded-full blur-3xl glow-gold"></div>
+        <Aurora
+          colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
+          blend={0.5}
+          amplitude={1.0}
+          speed={0.5}
+        />
       </div>
       
       {/* Magnetic Lines Background */}
