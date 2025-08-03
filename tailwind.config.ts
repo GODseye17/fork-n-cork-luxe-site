@@ -79,6 +79,7 @@ export default {
 				'gradient-gold': 'var(--gradient-gold)',
 				'gradient-luxury': 'var(--gradient-luxury)',
 				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 			},
 			boxShadow: {
 				'luxury': 'var(--shadow-luxury)',

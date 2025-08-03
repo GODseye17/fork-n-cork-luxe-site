@@ -10,28 +10,37 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Simple Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-luxury-black via-primary/20 to-luxury-black" />
+      {/* Enhanced Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-luxury-black via-primary/30 to-luxury-black" />
       
-      {/* Subtle Pattern Overlay */}
-      <div className="absolute inset-0 opacity-5">
+      {/* Radial Glow Effect Behind Logo */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-radial from-accent/20 via-accent/5 to-transparent rounded-full blur-3xl"></div>
+      </div>
+      
+      {/* Elegant Pattern Overlay */}
+      <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 25% 25%, hsl(var(--champagne-gold)) 2px, transparent 2px)`,
-          backgroundSize: '50px 50px'
+          backgroundImage: `radial-gradient(circle at 30% 40%, hsl(var(--champagne-gold)) 1px, transparent 1px), radial-gradient(circle at 70% 70%, hsl(var(--champagne-gold)) 1px, transparent 1px)`,
+          backgroundSize: '60px 60px, 80px 80px'
         }} />
       </div>
 
-      {/* Minimal Floating Elements */}
+      {/* Subtle Corner Accents */}
+      <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-accent/10 to-transparent rounded-full blur-2xl"></div>
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tl from-primary/20 to-transparent rounded-full blur-3xl"></div>
+
+      {/* Premium Floating Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(3)].map((_, i) => (
+        {[...Array(4)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 bg-accent/40 rounded-full animate-pulse"
+            className="absolute w-1 h-1 bg-accent/60 rounded-full animate-pulse"
             style={{
-              left: `${30 + i * 20}%`,
-              top: `${30 + i * 15}%`,
-              animationDelay: `${i * 2}s`,
-              animationDuration: '4s'
+              left: `${25 + i * 18}%`,
+              top: `${25 + i * 15}%`,
+              animationDelay: `${i * 1.5}s`,
+              animationDuration: '3s'
             }}
           />
         ))}
@@ -45,11 +54,15 @@ const HeroSection = () => {
         <div className={`mb-8 transition-all duration-800 delay-100 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
         }`}>
-          <img 
-            src="/lovable-uploads/bc1c71f1-5fc1-42c8-a921-e17c7de3801f.png" 
-            alt="Fork N Cork" 
-            className="h-28 md:h-36 lg:h-40 w-auto mx-auto mb-6 drop-shadow-2xl transition-all duration-500 hover:scale-105"
-          />
+          <div className="relative">
+            {/* Logo Glow Effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-accent/30 via-transparent to-accent/30 rounded-full blur-xl scale-110"></div>
+            <img 
+              src="/lovable-uploads/bc1c71f1-5fc1-42c8-a921-e17c7de3801f.png" 
+              alt="Fork N Cork" 
+              className="relative h-32 md:h-40 lg:h-48 w-auto mx-auto mb-6 drop-shadow-2xl transition-all duration-500 hover:scale-105 filter brightness-110"
+            />
+          </div>
         </div>
 
         {/* Tagline */}
