@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import MagnetLines from './MagnetLines';
-import GlitchText from './GlitchText';
+import ShapeBlur from './ShapeBlur';
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -49,22 +49,32 @@ const HeroSection = () => {
             isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
           }`}>
             <div className="relative w-full max-w-sm aspect-square overflow-hidden mt-8">
-              {/* Glass Morphism Border Container */}
-              <div className="relative p-1 rounded-3xl bg-gradient-to-br from-luxury-gold/40 via-champagne/30 to-luxury-gold/40 glow-gold">
-                <div className="relative rounded-[20px] overflow-hidden glass-morphism">
-                  {/* Logo Video */}
-                  <video 
-                    className="w-full h-full object-cover scale-110"
-                    autoPlay 
-                    loop 
-                    muted 
-                    playsInline
-                  >
-                    <source src="/lovable-uploads/Logo_Dance_Video_Generation.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                  {/* Inner Glow Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-accent/10 via-transparent to-accent/10 rounded-[20px]"></div>
+              {/* Video Container */}
+              <div className="relative w-full h-full">
+                {/* Logo Video */}
+                <video 
+                  className="w-full h-full object-cover rounded-3xl"
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
+                >
+                  <source src="/lovable-uploads/Logo_Dance_Video_Generation.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                
+                {/* ShapeBlur Overlay */}
+                <div className="absolute inset-0 pointer-events-none">
+                  <ShapeBlur
+                    variation={0}
+                    pixelRatioProp={window.devicePixelRatio || 1}
+                    shapeSize={0.8}
+                    roundness={0.6}
+                    borderSize={0.08}
+                    circleSize={0.4}
+                    circleEdge={0.3}
+                    className="mix-blend-screen opacity-80"
+                  />
                 </div>
               </div>
             </div>
@@ -75,18 +85,12 @@ const HeroSection = () => {
             isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
           }`}>
             {/* Tagline */}
-            <div className={`transition-all duration-800 delay-300 ${
+            <h1 className={`font-display text-2xl md:text-4xl lg:text-5xl font-light text-warm-white mb-6 leading-tight tracking-wide transition-all duration-800 delay-300 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}>
-              <GlitchText
-                speed={0.8}
-                enableShadows={true}
-                enableOnHover={false}
-                className="font-display mb-6"
-              >
-                Where Culinary Art Meets Liquid Poetry
-              </GlitchText>
-            </div>
+              Where Culinary Art
+              <span className="block text-gradient-gold font-normal">Meets Liquid Poetry</span>
+            </h1>
 
             {/* Subtitle */}
             <p className={`font-body text-base md:text-lg text-soft-gray mb-8 leading-relaxed tracking-wide transition-all duration-800 delay-500 ${
