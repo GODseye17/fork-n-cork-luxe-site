@@ -103,6 +103,11 @@ const HeroSection = () => {
                 height={50}
                 borderRadius={12}
                 className="cursor-pointer hover:scale-105 transition-transform duration-300"
+                onClick={() => {
+                  document.getElementById('reservations')?.scrollIntoView({ 
+                    behavior: 'smooth' 
+                  });
+                }}
               >
                 <span className="text-white font-semibold text-sm">
                   Reserve Your Table
