@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import MagnetLines from './MagnetLines';
 import ShinyText from './ShinyText';
-import Aurora from './Aurora';
 import GlassSurface from './GlassSurface';
+import SmokeyBackground from './SmokeyBackground';
 
 
 const HeroSection = () => {
@@ -13,33 +12,15 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-deep-charcoal">
-      {/* Aurora Background */}
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      {/* Smokey Background */}
       <div className="absolute inset-0">
-        <Aurora
-          colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
-          blend={0.5}
-          amplitude={1.0}
-          speed={0.5}
+        <SmokeyBackground 
+          color="#40531A"
+          backdropBlurAmount="sm"
+          className="w-full h-full"
         />
       </div>
-      
-      {/* Magnetic Lines Background */}
-      <div className="absolute inset-0 flex items-center justify-center opacity-20">
-        <MagnetLines 
-          rows={12}
-          columns={12}
-          containerSize="100vw"
-          lineColor="hsl(var(--luxury-gold))"
-          lineWidth="2px"
-          lineHeight="40px"
-          baseAngle={-15}
-        />
-      </div>
-
-      {/* Sophisticated Corner Accents */}
-      <div className="absolute top-0 left-0 w-80 h-80 bg-gradient-to-br from-champagne/8 to-transparent rounded-full blur-3xl glow-burgundy"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-rich-burgundy/12 to-transparent rounded-full blur-3xl"></div>
 
 
       {/* Hero Content - Split Layout */}
