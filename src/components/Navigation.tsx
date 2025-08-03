@@ -1,9 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import GooeyNav from './GooeyNav';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const navItems = [
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
+    { label: "Menu", href: "#menu" },
+    { label: "Events", href: "#events" },
+    { label: "Reservations", href: "#reservations" },
+    { label: "Contact", href: "#contact" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,15 +22,6 @@ const Navigation = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Menu', href: '#menu' },
-    { name: 'Events', href: '#events' },
-    { name: 'Reservations', href: '#reservations' },
-    { name: 'Contact', href: '#contact' },
-  ];
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -39,19 +40,18 @@ const Navigation = () => {
             />
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation with GooeyNav */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
-              {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="nav-link font-body font-medium tracking-wide text-luxury-white drop-shadow-md"
-                >
-                  {item.name}
-                </a>
-              ))}
-            </div>
+            <GooeyNav
+              items={navItems}
+              particleCount={15}
+              particleDistances={[90, 10]}
+              particleR={100}
+              initialActiveIndex={0}
+              animationTime={600}
+              timeVariance={300}
+              colors={[1, 2, 3, 1, 2, 3, 1, 4]}
+            />
           </div>
 
           {/* Mobile menu button */}
@@ -72,12 +72,12 @@ const Navigation = () => {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <a
-                key={item.name}
+                key={item.label}
                 href={item.href}
                 className="block px-3 py-2 text-luxury-white hover:text-accent transition-colors duration-300 font-body font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                {item.name}
+                {item.label}
               </a>
             ))}
           </div>
