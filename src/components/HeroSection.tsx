@@ -85,9 +85,9 @@ const HeroSection = () => {
           <div className={`flex items-center justify-center transition-all duration-800 order-2 lg:order-1 ${
             isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
           }`}>
-            <div className="relative w-full max-w-sm aspect-square overflow-hidden">
+            <div className="relative w-full max-w-sm aspect-square overflow-hidden mt-8">
               {/* Glossy Border Container */}
-              <div className="relative p-1 rounded-3xl bg-gradient-to-br from-accent/60 via-luxury-white/40 to-accent/60 shadow-elegant">
+              <div className="relative p-1 rounded-3xl bg-gradient-to-br from-accent/60 via-luxury-white/40 to-accent/60">
                 <div className="relative rounded-[20px] overflow-hidden bg-gradient-to-br from-luxury-black/20 to-luxury-black/40 backdrop-blur-sm">
                   {/* Logo Video */}
                   <video 
@@ -104,8 +104,6 @@ const HeroSection = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-accent/10 via-transparent to-accent/10 rounded-[20px]"></div>
                 </div>
               </div>
-              {/* Outer Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-accent/20 rounded-3xl blur-xl -z-10"></div>
             </div>
           </div>
 
