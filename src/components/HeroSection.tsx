@@ -60,6 +60,7 @@ const HeroSection = () => {
                 className="w-full h-full rounded-2xl border-2 border-accent/30 object-cover scale-110"
                 autoPlay 
                 loop 
+                muted 
                 playsInline
               >
                 <source src="/lovable-uploads/Logo_Dance_Video_Generation.mp4" type="video/mp4" />
