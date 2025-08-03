@@ -203,8 +203,9 @@ const ReservationSection = () => {
               </form>
 
               <p className="text-center text-muted-foreground text-sm mt-4">
-                Reservations are confirmed within 24 hours. For immediate assistance, call us at{' '}
+                After reserving table, call us at{' '}
                 <span className="text-accent font-semibold">+91 9876543210</span>
+                {' '}to confirm table on day of reservation. Reservations are confirmed within 24 hours.
               </p>
             </div>
           </div>
