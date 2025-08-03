@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter } from 'lucide-react';
+import InteractiveMap from './InteractiveMap';
 
 const ContactSection = () => {
   const contactInfo = [
@@ -108,33 +109,9 @@ const ContactSection = () => {
             </div>
           </div>
 
-          {/* Map Placeholder */}
+          {/* Interactive Map */}
           <div className="scroll-reveal">
-            <div className="relative h-96 bg-muted rounded-2xl overflow-hidden border border-border/20">
-              {/* Map would go here - using a placeholder for now */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin size={48} className="text-accent mx-auto mb-4" />
-                  <h4 className="font-display text-xl font-semibold text-foreground mb-2">
-                    Interactive Map
-                  </h4>
-                  <p className="text-muted-foreground">
-                    Main Road, Ranchi, Jharkhand
-                  </p>
-                  <a 
-                    href="https://maps.app.goo.gl/bDsEiZJyYqf5SXz79" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="btn-outline-gold mt-4"
-                  >
-                    Get Directions
-                  </a>
-                </div>
-              </div>
-              
-              {/* Map overlay with luxury styling */}
-              <div className="absolute inset-0 bg-gradient-to-t from-luxury-black/20 to-transparent pointer-events-none" />
-            </div>
+            <InteractiveMap />
 
             {/* Location Details */}
             <div className="mt-6 p-6 card-luxury">
