@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import MagnetLines from './MagnetLines';
-import GlitchText from './GlitchText';
+import TextTrail from './TextTrail';
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -75,17 +75,24 @@ const HeroSection = () => {
             isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
           }`}>
             {/* Tagline */}
-            <div className={`transition-all duration-800 delay-300 ${
+            <div className={`h-32 transition-all duration-800 delay-300 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}>
-              <GlitchText
-                speed={0.8}
-                enableShadows={true}
-                enableOnHover={false}
-                className="font-display mb-6"
-              >
-                Where Culinary Art Meets Liquid Poetry
-              </GlitchText>
+              <TextTrail 
+                text="Where Culinary Art Meets Liquid Poetry"
+                fontFamily="Figtree"
+                fontWeight="900"
+                noiseFactor={1.2}
+                noiseScale={0.001}
+                rgbPersistFactor={0.95}
+                alphaPersistFactor={0.92}
+                animateColor={true}
+                startColor="#ff6b6b"
+                textColor="#4ecdc4"
+                backgroundColor="transparent"
+                colorCycleInterval={2000}
+                supersample={2}
+              />
             </div>
 
             {/* Subtitle */}
