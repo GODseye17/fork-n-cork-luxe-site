@@ -121,7 +121,7 @@ const ContactSection = () => {
               <div className="space-y-3 text-sm">
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Parking:</span>
-                  <span className="text-foreground font-medium">Valet Available</span>
+                  <span className="text-foreground font-medium">Available Parking Space</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Accessibility:</span>
