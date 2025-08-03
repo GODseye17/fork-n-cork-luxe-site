@@ -52,10 +52,7 @@ const Footer = () => {
                   Opening Hours
                 </h4>
                 <div className="text-luxury-white/80 text-sm space-y-1">
-                  <p>Monday - Thursday</p>
-                  <p>6:00 PM - 12:00 AM</p>
-                  <p className="pt-2">Friday - Sunday</p>
-                  <p>6:00 PM - 1:00 AM</p>
+                  <p>All Day: 11:00 AM to 10:30 PM</p>
                 </div>
               </div>
             </div>
