@@ -101,8 +101,8 @@ export function ShinyText({
     : "0deg";
 
   // Default colors based on theme
-  const defaultBaseColor = "hsl(var(--foreground)/20)";
-  const defaultShineColor = "hsl(var(--primary)/20)";
+  const defaultBaseColor = "rgba(255, 255, 255, 0.1)";
+  const defaultShineColor = "rgba(255, 255, 255, 0.8)";
 
   const finalBaseColor = baseColor || defaultBaseColor;
   const finalShineColor = shineColor || defaultShineColor;
@@ -111,11 +111,8 @@ export function ShinyText({
     const transparentStartPos = Math.max(0, (50 - shineWidth / 2));
     const transparentEndPos = Math.min(100, (50 + shineWidth / 2));
 
-    const shineStart = `${finalShineColor} ${transparentStartPos}%`;
-    const shineEnd = `${finalShineColor} ${transparentEndPos}%`;
-
     return gradientType === "linear"
-      ? `linear-gradient(${gradientDirection}, ${finalBaseColor}, transparent ${transparentStartPos - 5}%, ${shineStart}, ${shineEnd}, transparent ${transparentEndPos + 5}%, ${finalBaseColor})`
+      ? `linear-gradient(${gradientDirection}, transparent, ${finalShineColor}, transparent)`
       : `radial-gradient(ellipse at center, ${finalShineColor} ${intensity * 100}%, transparent)`;
   };
 
@@ -165,16 +162,17 @@ export function ShinyText({
   return (
     <motion.span
       className={cn(
-        "bg-clip-text text-transparent inline-block",
+        "inline-block relative",
         sizeClasses[size],
         weightClasses[weight],
         className
       )}
       style={{
-        backgroundImage: createGradient(),
+        background: createGradient(),
         backgroundSize: config.backgroundSize,
         WebkitBackgroundClip: "text",
         backgroundClip: "text",
+        color: "transparent",
         opacity: intensity,
       }}
       variants={animationVariants}
