@@ -53,8 +53,8 @@ const ExperienceShowcase = () => {
               size="lg"
               speed={4}
               className="text-foreground"
-              baseColor="#0D0907"
-              shineColor="#0D0907"
+              baseColor="#2C3E50"
+              shineColor="#2C3E50"
             >
               Immerse yourself in a world where every detail is crafted to perfection. From our signature cocktails to our gourmet cuisine and live entertainment.
             </ShinyText>
