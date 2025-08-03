@@ -34,7 +34,7 @@ const ContactSection = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, name: 'Facebook', href: 'https://facebook.com/Fork-N-Cork' },
+    { icon: Facebook, name: 'Facebook', href: 'https://www.facebook.com/forkncorkrnc' },
     { icon: Instagram, name: 'Instagram', href: 'https://instagram.com/forkncork_' }
   ];
 
