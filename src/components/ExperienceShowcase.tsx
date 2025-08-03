@@ -6,6 +6,7 @@ import entertainmentImage from '@/assets/live-entertainment.jpg';
 import ShinyText from './ShinyText';
 import GlassSurface from './GlassSurface';
 import TiltedCard from './TiltedCard';
+import GradientText from './GradientText';
 
 const ExperienceShowcase = () => {
   const experiences = [
@@ -38,7 +39,14 @@ const ExperienceShowcase = () => {
         {/* Section Header */}
         <div className="text-center mb-16 scroll-reveal">
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-            The <span className="text-gradient-gold">Fork N Cork</span> Experience
+            <GradientText
+              colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+              animationSpeed={3}
+              showBorder={false}
+              className="custom-class"
+            >
+              The Fork N Cork Experience
+            </GradientText>
           </h2>
           <div className="font-body text-lg max-w-3xl mx-auto leading-relaxed">
             <ShinyText 
