@@ -26,7 +26,7 @@ const Navigation = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled 
         ? 'bg-luxury-black/95 backdrop-blur-md shadow-elegant' 
-        : 'bg-transparent'
+        : 'bg-gradient-to-b from-luxury-black/40 via-luxury-black/20 to-transparent backdrop-blur-sm'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
@@ -35,7 +35,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/bc1c71f1-5fc1-42c8-a921-e17c7de3801f.png" 
               alt="Fork N Cork" 
-              className="h-12 w-auto transition-all duration-300 hover:scale-105"
+              className="h-8 w-auto transition-all duration-300 hover:scale-105"
             />
           </div>
 
@@ -46,7 +46,7 @@ const Navigation = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="nav-link font-body font-medium tracking-wide"
+                  className="nav-link font-body font-medium tracking-wide text-luxury-white drop-shadow-md"
                 >
                   {item.name}
                 </a>
