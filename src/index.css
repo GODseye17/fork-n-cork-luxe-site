@@ -2,41 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* FORK N CORK - Luxury Restaurant Design System
+Inspired by Rolex's timeless elegance and sophistication
 */
 
 @layer base {
   :root {
+    /* Core Brand Colors - HSL Format */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 0 0% 0%;
 
+    /* Luxury Color Palette */
+    --forest-green: 146 100% 20%; /* Deep forest green #006837 */
+    --champagne-gold: 45 75% 52%; /* Champagne gold #D4AF37 */
+    --luxury-black: 0 0% 0%; /* Rich black */
+    --luxury-white: 0 0% 100%; /* Crisp white */
+    
+    /* Semantic Color Mappings */
+    --primary: 146 100% 20%; /* Forest green */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 45 75% 52%; /* Champagne gold */
+    --secondary-foreground: 0 0% 0%;
+    
+    --accent: 45 75% 52%; /* Gold accent */
+    --accent-foreground: 0 0% 0%;
+    
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 0 0% 0%;
+    
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 0%;
+    
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
+    
+    --border: 0 0% 90%;
+    --input: 0 0% 95%;
+    --ring: 45 75% 52%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    /* Luxury Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--forest-green)), hsl(var(--forest-green) / 0.8));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--champagne-gold)), hsl(45 85% 60%));
+    --gradient-luxury: linear-gradient(135deg, hsl(var(--luxury-black)), hsl(0 0% 20%));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--luxury-black) / 0.7), hsl(var(--forest-green) / 0.6));
+    
+    /* Luxury Shadows */
+    --shadow-luxury: 0 25px 50px -12px hsl(var(--luxury-black) / 0.4);
+    --shadow-gold: 0 10px 30px -5px hsl(var(--champagne-gold) / 0.3);
+    --shadow-elegant: 0 4px 20px hsl(var(--luxury-black) / 0.1);
+    
+    /* Premium Typography Scale */
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    
+    /* Smooth Transitions */
+    --transition-luxury: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +127,156 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body;
+  }
+
+  /* Luxury Typography Classes */
+  .font-display {
+    font-family: var(--font-display);
+  }
+  
+  .font-body {
+    font-family: var(--font-body);
+  }
+}
+
+@layer components {
+  /* Luxury Button Variants */
+  .btn-luxury {
+    @apply relative overflow-hidden bg-gradient-to-r from-primary to-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold tracking-wide transition-all duration-300 hover:scale-105 hover:shadow-[var(--shadow-luxury)] focus:outline-none focus:ring-2 focus:ring-accent/50;
+  }
+  
+  .btn-gold {
+    @apply relative overflow-hidden bg-gradient-to-r from-secondary to-secondary/90 text-secondary-foreground px-8 py-4 rounded-lg font-semibold tracking-wide transition-all duration-300 hover:scale-105 hover:shadow-[var(--shadow-gold)] focus:outline-none focus:ring-2 focus:ring-accent/50;
+  }
+  
+  .btn-outline-gold {
+    @apply relative overflow-hidden border-2 border-secondary text-secondary px-8 py-4 rounded-lg font-semibold tracking-wide transition-all duration-300 hover:bg-secondary hover:text-secondary-foreground hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent/50;
+  }
+
+  /* Luxury Card Styles */
+  .card-luxury {
+    @apply bg-card/95 backdrop-blur-sm border border-border/20 rounded-2xl shadow-[var(--shadow-elegant)] transition-all duration-300 hover:shadow-[var(--shadow-luxury)] hover:-translate-y-2;
+  }
+  
+  /* Gold Gradient Text */
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-secondary via-secondary to-accent bg-clip-text text-transparent;
+  }
+  
+  /* Parallax Container */
+  .parallax {
+    @apply relative overflow-hidden;
+  }
+  
+  /* Floating Animation for Particles */
+  .floating {
+    animation: floating 6s ease-in-out infinite;
+  }
+  
+  .floating-delayed {
+    animation: floating 6s ease-in-out infinite 2s;
+  }
+  
+  /* Luxury Input Styling */
+  .input-luxury {
+    @apply w-full px-4 py-3 bg-card/50 border border-border/30 rounded-lg focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-300 placeholder:text-muted-foreground;
+  }
+  
+  /* Navigation Link Hover Effect */
+  .nav-link {
+    @apply relative text-foreground/80 hover:text-accent transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-accent after:transition-all after:duration-300 hover:after:w-full;
+  }
+  
+  /* Image Hover Effects */
+  .image-hover {
+    @apply transition-transform duration-500 hover:scale-110;
+  }
+  
+  /* Scroll Reveal Animation */
+  .scroll-reveal {
+    @apply opacity-0 translate-y-8 transition-all duration-700;
+  }
+  
+  .scroll-reveal.revealed {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+@layer utilities {
+  /* Custom Keyframes */
+  @keyframes floating {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    33% {
+      transform: translateY(-10px) rotate(1deg);
+    }
+    66% {
+      transform: translateY(5px) rotate(-1deg);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+  
+  /* Animation Classes */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+  }
+  
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out;
+  }
+  
+  .animate-shimmer {
+    background: linear-gradient(90deg, transparent, hsl(var(--accent) / 0.3), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+  
+  /* Gradient Backgrounds */
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .bg-gradient-gold {
+    background: var(--gradient-gold);
+  }
+  
+  .bg-gradient-luxury {
+    background: var(--gradient-luxury);
+  }
+  
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
   }
 }
