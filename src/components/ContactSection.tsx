@@ -18,13 +18,13 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: 'Email',
-      details: ['reservations@forkncoork.com', 'events@forkncoork.com'],
+      details: ['forkncorkranchi@gmail.com'],
       action: 'Send Email'
     },
     {
       icon: Clock,
       title: 'Hours',
-      details: ['Mon - Thu: 6:00 PM - 12:00 AM', 'Fri - Sun: 6:00 PM - 1:00 AM'],
+      details: ['All Day: 11:00 AM - 10:30 PM'],
       action: 'Start Ordering'
     }
   ];
