@@ -38,15 +38,8 @@ const ExperienceShowcase = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 scroll-reveal">
-          <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
-            <GradientText
-              colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
-              animationSpeed={3}
-              showBorder={false}
-              className="custom-class"
-            >
-              The Fork N Cork Experience
-            </GradientText>
+          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 leading-tight">
+            The Fork N Cork Experience
           </h2>
           <div className="font-body text-lg max-w-3xl mx-auto leading-relaxed">
             <ShinyText 
