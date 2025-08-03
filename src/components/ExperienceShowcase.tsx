@@ -4,6 +4,8 @@ import cocktailImage from '@/assets/premium-cocktail.jpg';
 import dishImage from '@/assets/gourmet-dish.jpg';
 import entertainmentImage from '@/assets/live-entertainment.jpg';
 import ShinyText from './ShinyText';
+import GlassSurface from './GlassSurface';
+import TiltedCard from './TiltedCard';
 
 const ExperienceShowcase = () => {
   const experiences = [
@@ -51,55 +53,70 @@ const ExperienceShowcase = () => {
           {experiences.map((experience, index) => (
             <div
               key={experience.title}
-              className={`card-luxury p-8 group scroll-reveal`}
+              className="scroll-reveal"
               style={{ animationDelay: `${index * 200}ms` }}
             >
-              {/* Image */}
-              <div className="relative mb-6 overflow-hidden rounded-xl">
-                <img
-                  src={experience.image}
-                  alt={experience.title}
-                  className="w-full h-48 object-cover image-hover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-luxury-black/60 to-transparent" />
-                
-                {/* Icon Overlay */}
-                <div className="absolute top-4 right-4 w-12 h-12 bg-accent/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <experience.icon size={24} className="text-luxury-black" />
-                </div>
-              </div>
+              <TiltedCard
+                imageSrc={experience.image}
+                altText={experience.title}
+                captionText={experience.title}
+                containerHeight="400px"
+                containerWidth="100%"
+                imageHeight="300px"
+                imageWidth="100%"
+                rotateAmplitude={12}
+                scaleOnHover={1.1}
+                showMobileWarning={false}
+                showTooltip={true}
+                displayOverlayContent={true}
+                overlayContent={
+                  <div className="w-full h-full bg-gradient-to-t from-black/80 via-black/40 to-transparent rounded-[15px] flex flex-col justify-between p-6">
+                    {/* Icon */}
+                    <div className="w-12 h-12 bg-accent/90 rounded-full flex items-center justify-center mb-4">
+                      <experience.icon size={24} className="text-luxury-black" />
+                    </div>
 
-              {/* Content */}
-              <div className="text-center">
-                <h3 className="font-display text-2xl font-semibold text-foreground mb-4">
-                  {experience.title}
-                </h3>
-                <div className="font-body mb-6 leading-relaxed">
-                  <ShinyText text={experience.description} speed={5} />
-                </div>
+                    {/* Content */}
+                    <div>
+                      <h3 className="font-display text-xl font-semibold text-white mb-2">
+                        {experience.title}
+                      </h3>
+                      <div className="font-body mb-4 leading-relaxed text-sm">
+                        <ShinyText text={experience.description} speed={6} />
+                      </div>
+                      
+                      {/* Features */}
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {experience.features.map((feature, featureIndex) => (
+                          <span 
+                            key={featureIndex}
+                            className="px-3 py-1 bg-accent/20 text-accent text-xs font-medium rounded-full"
+                          >
+                            {feature}
+                          </span>
+                        ))}
+                      </div>
 
-                {/* Features */}
-                <div className="flex flex-wrap justify-center gap-2 mb-6">
-                  {experience.features.map((feature) => (
-                    <span
-                      key={feature}
-                      className="px-3 py-1 bg-accent/10 text-accent text-sm font-medium rounded-full"
-                    >
-                      {feature}
-                    </span>
-                  ))}
-                </div>
-
-                {/* CTA */}
-                <a 
-                  href="https://forkncork.in" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="btn-outline-gold w-full group-hover:bg-accent group-hover:text-luxury-black transition-all duration-300"
-                >
-                  Order Online
-                </a>
-              </div>
+                      {/* Order Button */}
+                      <GlassSurface 
+                        width="100%"
+                        height={40}
+                        borderRadius={8}
+                        className="cursor-pointer hover:scale-105 transition-transform duration-300"
+                      >
+                        <a 
+                          href="https://forkncork.in" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-white font-medium text-sm"
+                        >
+                          Order Online
+                        </a>
+                      </GlassSurface>
+                    </div>
+                  </div>
+                }
+              />
             </div>
           ))}
         </div>
