@@ -39,7 +39,7 @@ const ExperienceShowcase = () => {
         {/* Section Header */}
         <div className="text-center mb-16 scroll-reveal">
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 leading-tight">
-            The Fork N Cork Experience
+            Fork N Cork Experience
           </h2>
           <div className="font-body text-lg max-w-3xl mx-auto leading-relaxed">
             <ShinyText 
