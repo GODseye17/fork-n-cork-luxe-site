@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from 'lucide-react';
 import InteractiveMap from './InteractiveMap';
 import GlassSurface from './GlassSurface';
 import Squares from './Squares';
@@ -34,9 +34,8 @@ const ContactSection = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, name: 'Facebook', href: '#' },
-    { icon: Instagram, name: 'Instagram', href: '#' },
-    { icon: Twitter, name: 'Twitter', href: '#' }
+    { icon: Facebook, name: 'Facebook', href: 'https://facebook.com/Fork-N-Cork' },
+    { icon: Instagram, name: 'Instagram', href: 'https://instagram.com/forkncork_' }
   ];
 
   return (
@@ -127,6 +126,8 @@ const ContactSection = () => {
                   <a
                     key={social.name}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-luxury-black transition-all duration-300 hover:scale-110"
                     aria-label={social.name}
                   >
