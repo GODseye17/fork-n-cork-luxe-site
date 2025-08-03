@@ -25,7 +25,7 @@ const ContactSection = () => {
       icon: Clock,
       title: 'Hours',
       details: ['Mon - Thu: 6:00 PM - 12:00 AM', 'Fri - Sun: 6:00 PM - 1:00 AM'],
-      action: 'View Menu'
+      action: 'Start Ordering'
     }
   ];
 

@@ -135,21 +135,31 @@ const MenuPreview = () => {
                 <div className="text-2xl font-bold text-gradient-gold mb-6">
                   {item.price}
                 </div>
-                <button className="btn-outline-gold w-full text-sm">
-                  Add to Order
-                </button>
+                <a 
+                  href="https://forkncork.in" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="btn-outline-gold w-full text-sm"
+                >
+                  Order Now
+                </a>
               </div>
             </div>
           ))}
         </div>
 
-        {/* View Full Menu CTA */}
+        {/* Start Ordering CTA */}
         <div className="text-center mt-16 scroll-reveal">
-          <button className="btn-gold">
-            View Full Menu
-          </button>
+          <a 
+            href="https://forkncork.in" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="btn-gold"
+          >
+            Start Ordering Now
+          </a>
           <p className="font-body text-muted-foreground mt-4">
-            Discover our complete selection of premium dishes and cocktails
+            Order online for pickup or delivery - Experience Fork N Cork at home
           </p>
         </div>
       </div>

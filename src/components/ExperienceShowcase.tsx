@@ -88,9 +88,14 @@ const ExperienceShowcase = () => {
                 </div>
 
                 {/* CTA */}
-                <button className="btn-outline-gold w-full group-hover:bg-accent group-hover:text-luxury-black transition-all duration-300">
-                  Explore More
-                </button>
+                <a 
+                  href="https://forkncork.in" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="btn-outline-gold w-full group-hover:bg-accent group-hover:text-luxury-black transition-all duration-300"
+                >
+                  Order Online
+                </a>
               </div>
             </div>
           ))}

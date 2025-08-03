@@ -72,12 +72,17 @@ const HeroSection = () => {
         <div className={`flex flex-col sm:flex-row gap-6 justify-center transition-all duration-1000 delay-700 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
-          <button className="btn-gold group">
-            <span className="relative z-10">Reserve Your Table</span>
+          <a 
+            href="https://forkncork.in" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="btn-gold group"
+          >
+            <span className="relative z-10">Start Ordering</span>
             <div className="absolute inset-0 bg-gradient-to-r from-accent to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </button>
+          </a>
           <button className="btn-outline-gold">
-            View Our Menu
+            Reserve Your Table
           </button>
         </div>
       </div>
