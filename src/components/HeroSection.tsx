@@ -77,23 +77,8 @@ const HeroSection = () => {
           <div className={`flex flex-col justify-center transition-all duration-800 delay-200 ${
             isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
           }`}>
-            {/* Main Logo */}
-            <div className={`mb-8 transition-all duration-800 delay-300 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-            }`}>
-              <div className="relative">
-                {/* Logo Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-accent/30 via-transparent to-accent/30 rounded-full blur-xl scale-110"></div>
-                <img 
-                  src="/lovable-uploads/bc1c71f1-5fc1-42c8-a921-e17c7de3801f.png" 
-                  alt="Fork N Cork" 
-                  className="relative h-24 md:h-32 lg:h-40 w-auto mb-6 drop-shadow-2xl transition-all duration-500 hover:scale-105 filter brightness-110"
-                />
-              </div>
-            </div>
-
             {/* Tagline */}
-            <h1 className={`font-display text-2xl md:text-4xl lg:text-5xl font-bold text-luxury-white mb-6 leading-tight transition-all duration-800 delay-400 ${
+            <h1 className={`font-display text-2xl md:text-4xl lg:text-5xl font-bold text-luxury-white mb-6 leading-tight transition-all duration-800 delay-300 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}>
               Where Culinary Art
