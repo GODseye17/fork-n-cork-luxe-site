@@ -46,9 +46,9 @@ const HeroSection = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
         }`}>
           <img 
-            src="/lovable-uploads/34166426-3355-4279-b5e2-8d2e78fb6cb4.png" 
+            src="/lovable-uploads/bc1c71f1-5fc1-42c8-a921-e17c7de3801f.png" 
             alt="Fork N Cork" 
-            className="h-24 md:h-32 w-auto mx-auto mb-6 opacity-90 mix-blend-screen filter brightness-110 contrast-110"
+            className="h-28 md:h-36 lg:h-40 w-auto mx-auto mb-6 drop-shadow-2xl transition-all duration-500 hover:scale-105"
           />
         </div>
 

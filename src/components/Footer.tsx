@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="md:col-span-2">
             <img 
-              src="/lovable-uploads/34166426-3355-4279-b5e2-8d2e78fb6cb4.png" 
+              src="/lovable-uploads/bc1c71f1-5fc1-42c8-a921-e17c7de3801f.png" 
               alt="Fork N Cork" 
               className="h-16 w-auto mb-6"
             />
