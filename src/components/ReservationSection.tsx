@@ -98,8 +98,8 @@ const ReservationSection = () => {
                   <Phone size={20} className="text-luxury-black" />
                 </div>
                 <div>
-                  <h3 className="font-body font-semibold text-luxury-white">24/7 Concierge</h3>
-                  <p className="text-luxury-white/80 text-sm">Dedicated service for your needs</p>
+                  <h3 className="font-body font-semibold text-luxury-white">Best Offers</h3>
+                  <p className="text-luxury-white/80 text-sm">Best offers on alcohol and food and great combo offers daily!</p>
                 </div>
               </div>
             </div>
