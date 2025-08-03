@@ -55,19 +55,17 @@ const HeroSection = () => {
             isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
           }`}>
             <div className="relative w-full max-w-lg aspect-video">
-              {/* Video Placeholder Box */}
-              <div className="w-full h-full bg-gradient-to-br from-luxury-black/60 via-primary/20 to-luxury-black/60 rounded-2xl border-2 border-accent/30 backdrop-blur-sm">
-                <div className="flex items-center justify-center h-full">
-                  <div className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-accent/20 flex items-center justify-center">
-                      <svg className="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z"/>
-                      </svg>
-                    </div>
-                    <p className="text-luxury-white/60 font-body">Video placeholder - Drop your MP4 file here</p>
-                  </div>
-                </div>
-              </div>
+              {/* Logo Video */}
+              <video 
+                className="w-full h-full rounded-2xl border-2 border-accent/30 object-cover"
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+              >
+                <source src="/lovable-uploads/Logo_Dance_Video_Generation.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-accent/20 rounded-2xl blur-xl -z-10"></div>
             </div>
