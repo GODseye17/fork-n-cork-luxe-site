@@ -9,8 +9,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <img src="/lovable-uploads/bc1c71f1-5fc1-42c8-a921-e17c7de3801f.png" alt="Fork N Cork" className="h-16 w-auto mb-6" />
             <p className="font-body text-luxury-white/80 leading-relaxed mb-6 max-w-md">
-              Where culinary art meets liquid poetry. Experience the finest dining 
-              and cocktails in the heart of Ranchi, crafted with passion and precision.
+              Fork N Cork is a family-owned restaurant specializing in delicious comfort food and barbecue dishes. Our mission is to provide a warm and welcoming atmosphere for our guests to enjoy hearty meals made with quality ingredients. With a passion for good food and great service, we strive to create a memorable dining experience for all who visit us.
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-3">
