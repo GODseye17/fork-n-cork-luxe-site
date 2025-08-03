@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-// @ts-ignore
-import anime from 'animejs';
+
+declare const anime: any;
 
 export const useAnimeScrollReveal = () => {
   useEffect(() => {
@@ -127,7 +127,7 @@ export const useAnimeScrollReveal = () => {
                 opacity: [0, 1],
                 translateY: [20, 0],
                 duration: 600,
-                delay: anime.stagger(50),
+                delay: (el: any, i: number) => i * 50,
                 easing: 'easeOutExpo'
               });
               break;
