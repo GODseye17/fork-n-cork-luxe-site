@@ -78,7 +78,7 @@ const ExperienceShowcase = () => {
                 showTooltip={true}
                 displayOverlayContent={true}
                 overlayContent={
-                  <div className="w-full h-full bg-gradient-to-t from-black/80 via-black/40 to-transparent rounded-[15px] flex flex-col justify-between p-6">
+                  <div className="w-full h-full bg-gradient-to-t from-black/90 via-black/60 to-transparent rounded-[15px] flex flex-col justify-between p-6">
                     {/* Icon */}
                     <div className="w-12 h-12 bg-accent/90 rounded-full flex items-center justify-center mb-4">
                       <experience.icon size={24} className="text-luxury-black" />
