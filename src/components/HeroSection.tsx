@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import MagnetLines from './MagnetLines';
-import FuzzyText from './FuzzyText';
+
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -75,20 +75,11 @@ const HeroSection = () => {
             isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
           }`}>
             {/* Tagline */}
-            <div className={`transition-all duration-800 delay-300 ${
+            <h1 className={`font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 leading-tight transition-all duration-800 delay-300 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}>
-              <FuzzyText 
-                baseIntensity={0.2} 
-                hoverIntensity={0.5} 
-                enableHover={true}
-                fontSize="clamp(100rem, 200vw, 160rem)"
-                fontWeight="900"
-                color="#ffffff"
-              >
-                Where Culinary Art Meets Liquid Poetry
-              </FuzzyText>
-            </div>
+              Where Culinary Art Meets Liquid Poetry
+            </h1>
 
             {/* Subtitle */}
             <p className={`font-body text-base md:text-lg text-soft-gray mb-8 leading-relaxed tracking-wide transition-all duration-800 delay-500 ${
