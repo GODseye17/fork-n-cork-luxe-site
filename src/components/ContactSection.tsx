@@ -39,18 +39,21 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="relative py-20 overflow-hidden">
+    <section id="contact" className="relative py-20 bg-background overflow-hidden min-h-screen">
       {/* Grid Distortion Background */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 z-0">
         <GridDistortion
           imageSrc="https://picsum.photos/1920/1080?grayscale"
           grid={10}
           mouse={0.1}
           strength={0.15}
           relaxation={0.9}
-          className="opacity-30"
+          className="opacity-20"
         />
       </div>
+      
+      {/* Overlay for better text readability */}
+      <div className="absolute inset-0 bg-background/50 z-[1]"></div>
       
       {/* Content overlay */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
