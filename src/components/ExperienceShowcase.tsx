@@ -34,7 +34,7 @@ const ExperienceShowcase = () => {
   ];
 
   return (
-    <section className="py-20" style={{ backgroundColor: '#F1F1F1' }}>
+    <section className="py-20" style={{ backgroundColor: '#151922' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 scroll-reveal">
@@ -52,9 +52,9 @@ const ExperienceShowcase = () => {
             <ShinyText 
               size="lg"
               speed={4}
-              className="text-foreground"
-              baseColor="#2C3E50"
-              shineColor="#2C3E50"
+              className="text-white"
+              baseColor="rgba(255,255,255,0.8)"
+              shineColor="rgba(255,255,255,1)"
             >
               Immerse yourself in a world where every detail is crafted to perfection. From our signature cocktails to our gourmet cuisine and live entertainment.
             </ShinyText>
