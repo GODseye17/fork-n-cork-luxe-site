@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import MagnetLines from './MagnetLines';
 import ShinyText from './ShinyText';
 import Aurora from './Aurora';
-import { Button } from '@/components/ui/button';
+import GlassSurface from './GlassSurface';
 
 
 const HeroSection = () => {
@@ -97,26 +97,31 @@ const HeroSection = () => {
             <div className={`flex flex-col sm:flex-row gap-4 transition-all duration-800 delay-600 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}>
-              <Button 
-                asChild
-                size="lg"
-                className="bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary/80"
+              <GlassSurface 
+                width={200} 
+                height={50}
+                borderRadius={12}
+                className="cursor-pointer hover:scale-105 transition-transform duration-300"
               >
                 <a 
                   href="https://forkncork.in" 
                   target="_blank" 
                   rel="noopener noreferrer"
+                  className="text-white font-semibold text-sm"
                 >
                   Start Ordering
                 </a>
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+              </GlassSurface>
+              <GlassSurface 
+                width={200} 
+                height={50}
+                borderRadius={12}
+                className="cursor-pointer hover:scale-105 transition-transform duration-300"
               >
-                Reserve Your Table
-              </Button>
+                <span className="text-white font-semibold text-sm">
+                  Reserve Your Table
+                </span>
+              </GlassSurface>
             </div>
           </div>
         </div>

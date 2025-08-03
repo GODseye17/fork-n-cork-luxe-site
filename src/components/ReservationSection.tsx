@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Calendar, Clock, Users, Phone, Mail, User } from 'lucide-react';
 import Cubes from './Cubes';
-import { Button } from '@/components/ui/button';
+import GlassSurface from './GlassSurface';
 
 const ReservationSection = () => {
   const [formData, setFormData] = useState({
@@ -214,13 +214,20 @@ const ReservationSection = () => {
                   />
                 </div>
 
-                <Button 
-                  type="submit" 
-                  size="lg"
-                  className="w-full bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary/80"
+                <GlassSurface 
+                  width="100%"
+                  height={50}
+                  borderRadius={12}
+                  className="cursor-pointer hover:scale-105 transition-transform duration-300"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleSubmit(e as any);
+                  }}
                 >
-                  Reserve Your Table
-                </Button>
+                  <span className="text-white font-semibold">
+                    Reserve Your Table
+                  </span>
+                </GlassSurface>
               </form>
 
               <p className="text-center text-muted-foreground text-sm mt-4">

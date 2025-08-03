@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import GooeyNav from './GooeyNav';
-import { Button } from '@/components/ui/button';
+import GlassSurface from './GlassSurface';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -55,14 +55,15 @@ const Navigation = () => {
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <Button
-              variant="ghost"
-              size="icon"
+            <GlassSurface
+              width={40}
+              height={40}
+              borderRadius={8}
+              className="cursor-pointer hover:scale-105 transition-transform duration-300"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-luxury-white hover:text-accent hover:bg-transparent"
             >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </Button>
+              {isMobileMenuOpen ? <X size={20} className="text-white" /> : <Menu size={20} className="text-white" />}
+            </GlassSurface>
           </div>
         </div>
       </div>

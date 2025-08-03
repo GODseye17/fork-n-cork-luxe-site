@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 import ShinyText from './ShinyText';
-import { Button } from '@/components/ui/button';
+import GlassSurface from './GlassSurface';
 
 const MenuPreview = () => {
   const [activeCategory, setActiveCategory] = useState('signature');
@@ -98,14 +98,22 @@ const MenuPreview = () => {
         <div className="flex justify-center mb-12 scroll-reveal">
           <div className="bg-card/50 backdrop-blur-sm rounded-xl p-2 border border-border/20">
             {Object.entries(menuCategories).map(([key, category]) => (
-              <Button
+              <GlassSurface
                 key={key}
-                variant={activeCategory === key ? "default" : "ghost"}
+                width={150}
+                height={40}
+                borderRadius={8}
+                className={`cursor-pointer transition-all duration-300 m-1 ${
+                  activeCategory === key ? 'scale-105' : 'hover:scale-102'
+                }`}
                 onClick={() => setActiveCategory(key)}
-                className="font-body font-medium"
               >
-                {category.title}
-              </Button>
+                <span className={`font-body font-medium text-sm ${
+                  activeCategory === key ? 'text-white' : 'text-white/80'
+                }`}>
+                  {category.title}
+                </span>
+              </GlassSurface>
             ))}
           </div>
         </div>
@@ -136,20 +144,21 @@ const MenuPreview = () => {
                 <div className="text-2xl font-bold text-gradient-gold mb-6">
                   {item.price}
                 </div>
-                <Button 
-                  asChild
-                  variant="outline"
-                  size="sm"
-                  className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                <GlassSurface 
+                  width="100%"
+                  height={40}
+                  borderRadius={8}
+                  className="cursor-pointer hover:scale-105 transition-transform duration-300"
                 >
                   <a 
                     href="https://forkncork.in" 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    className="text-white font-medium text-sm"
                   >
                     Order Now
                   </a>
-                </Button>
+                </GlassSurface>
               </div>
             </div>
           ))}
@@ -157,19 +166,21 @@ const MenuPreview = () => {
 
         {/* Start Ordering CTA */}
         <div className="text-center mt-16 scroll-reveal">
-          <Button 
-            asChild
-            size="lg"
-            className="bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary/80"
+          <GlassSurface 
+            width={200} 
+            height={50}
+            borderRadius={12}
+            className="cursor-pointer hover:scale-105 transition-transform duration-300 mx-auto"
           >
             <a 
               href="https://forkncork.in" 
               target="_blank" 
               rel="noopener noreferrer"
+              className="text-white font-semibold text-sm"
             >
               Start Ordering Now
             </a>
-          </Button>
+          </GlassSurface>
           <div className="font-body mt-4">
             <ShinyText text="Order online for pickup or delivery - Experience Fork N Cork at home" speed={5} />
           </div>

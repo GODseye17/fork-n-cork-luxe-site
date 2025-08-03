@@ -1,7 +1,7 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter } from 'lucide-react';
 import InteractiveMap from './InteractiveMap';
-import { Button } from '@/components/ui/button';
+import GlassSurface from './GlassSurface';
 
 const ContactSection = () => {
   const contactInfo = [
@@ -81,13 +81,16 @@ const ContactSection = () => {
                          {info.action} →
                        </a>
                       ) : (
-                        <Button 
-                          variant="ghost" 
-                          size="sm"
-                          className="h-auto p-0 text-accent hover:text-accent/80 font-medium text-sm mt-2"
+                        <GlassSurface 
+                          width={120}
+                          height={30}
+                          borderRadius={6}
+                          className="cursor-pointer hover:scale-105 transition-transform duration-300"
                         >
-                          {info.action} →
-                        </Button>
+                          <span className="text-white font-medium text-xs">
+                            {info.action} →
+                          </span>
+                        </GlassSurface>
                       )}
                   </div>
                 </div>
