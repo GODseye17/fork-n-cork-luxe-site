@@ -39,7 +39,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="min-h-screen py-20 relative overflow-hidden" style={{ backgroundColor: '#36535E' }}>
+    <section id="contact" className="min-h-screen py-20 relative overflow-hidden" style={{ backgroundColor: '#99E1D9' }}>
       {/* Animated Squares Background */}
       <div className="absolute inset-0 opacity-20">
         <Squares 

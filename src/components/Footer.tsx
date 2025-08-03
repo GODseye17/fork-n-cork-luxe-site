@@ -1,7 +1,7 @@
 import React from 'react';
 import { Heart, Phone, Mail, MapPin } from 'lucide-react';
 const Footer = () => {
-  return <footer style={{ backgroundColor: '#A79885' }} className="text-luxury-white">
+  return <footer style={{ backgroundColor: '#202C39' }} className="text-luxury-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="py-16 grid grid-cols-1 md:grid-cols-4 gap-8">
