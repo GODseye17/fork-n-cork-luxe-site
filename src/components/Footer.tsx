@@ -19,7 +19,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={16} className="text-accent" />
-                <span className="text-sm">reservations@forkncoork.com</span>
+                <span className="text-sm">forkncorkranchi@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin size={16} className="text-accent" />
@@ -34,7 +34,7 @@ const Footer = () => {
               Quick Links
             </h3>
             <ul className="space-y-3">
-              {['About Us', 'Our Menu', 'Reservations', 'Private Events', 'Gift Cards', 'Careers'].map(link => <li key={link}>
+              {['About Us', 'Our Menu', 'Reservations', 'Private Events', 'Gift Cards'].map(link => <li key={link}>
                   <a href="#" className="text-luxury-white/80 hover:text-accent transition-colors duration-300 text-sm">
                     {link}
                   </a>
@@ -58,14 +58,6 @@ const Footer = () => {
                   <p className="pt-2">Friday - Sunday</p>
                   <p>6:00 PM - 1:00 AM</p>
                 </div>
-              </div>
-              <div className="pt-4 space-y-2">
-                <a href="#" className="block text-luxury-white/80 hover:text-accent transition-colors duration-300 text-sm">
-                  Privacy Policy
-                </a>
-                <a href="#" className="block text-luxury-white/80 hover:text-accent transition-colors duration-300 text-sm">
-                  Terms of Service
-                </a>
               </div>
             </div>
           </div>
