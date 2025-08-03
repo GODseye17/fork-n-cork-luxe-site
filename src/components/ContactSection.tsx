@@ -69,9 +69,20 @@ const ContactSection = () => {
                     {info.details.map((detail, i) => (
                       <p key={i} className="text-muted-foreground mb-1">{detail}</p>
                     ))}
-                    <button className="text-accent hover:text-accent/80 font-medium text-sm mt-2 transition-colors duration-300">
-                      {info.action} →
-                    </button>
+                     {info.title === 'Location' ? (
+                       <a 
+                         href="https://maps.app.goo.gl/bDsEiZJyYqf5SXz79" 
+                         target="_blank" 
+                         rel="noopener noreferrer"
+                         className="text-accent hover:text-accent/80 font-medium text-sm mt-2 transition-colors duration-300"
+                       >
+                         {info.action} →
+                       </a>
+                     ) : (
+                       <button className="text-accent hover:text-accent/80 font-medium text-sm mt-2 transition-colors duration-300">
+                         {info.action} →
+                       </button>
+                     )}
                   </div>
                 </div>
               ))}
@@ -110,9 +121,14 @@ const ContactSection = () => {
                   <p className="text-muted-foreground">
                     Main Road, Ranchi, Jharkhand
                   </p>
-                  <button className="btn-outline-gold mt-4">
+                  <a 
+                    href="https://maps.app.goo.gl/bDsEiZJyYqf5SXz79" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="btn-outline-gold mt-4"
+                  >
                     Get Directions
-                  </button>
+                  </a>
                 </div>
               </div>
               
