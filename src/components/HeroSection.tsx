@@ -51,7 +51,7 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 w-full max-w-7xl mx-auto">
           
           {/* Left Side - Video Box */}
-          <div className={`flex items-center justify-center transition-all duration-800 ${
+          <div className={`flex items-center justify-center transition-all duration-800 order-2 lg:order-1 ${
             isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
           }`}>
             <div className="relative w-full max-w-sm aspect-square overflow-hidden">
@@ -72,7 +72,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Side - Content */}
-          <div className={`flex flex-col justify-center transition-all duration-800 delay-200 ${
+          <div className={`flex flex-col justify-center transition-all duration-800 delay-200 order-1 lg:order-2 ${
             isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
           }`}>
             {/* Tagline */}
