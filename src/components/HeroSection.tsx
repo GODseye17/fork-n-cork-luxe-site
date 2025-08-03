@@ -30,20 +30,51 @@ const HeroSection = () => {
       <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-accent/5 to-transparent rounded-full blur-2xl"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tl from-primary/10 to-transparent rounded-full blur-3xl"></div>
 
-      {/* Premium Floating Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(4)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-accent/60 rounded-full animate-pulse"
-            style={{
-              left: `${25 + i * 18}%`,
-              top: `${25 + i * 15}%`,
-              animationDelay: `${i * 1.5}s`,
-              animationDuration: '3s'
-            }}
-          />
-        ))}
+      {/* Small Whiskey Video Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Corner videos */}
+        <div className="absolute top-4 left-4 w-16 h-16 rounded-lg overflow-hidden opacity-30">
+          <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+            <source src="/lovable-uploads/whiskey ATTPAC.webm" type="video/webm" />
+          </video>
+        </div>
+        
+        <div className="absolute top-4 right-4 w-12 h-12 rounded-full overflow-hidden opacity-25">
+          <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+            <source src="/lovable-uploads/whiskey ATTPAC.webm" type="video/webm" />
+          </video>
+        </div>
+        
+        <div className="absolute bottom-20 left-8 w-14 h-14 rounded-lg overflow-hidden opacity-20">
+          <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+            <source src="/lovable-uploads/whiskey ATTPAC.webm" type="video/webm" />
+          </video>
+        </div>
+        
+        <div className="absolute bottom-32 right-12 w-10 h-10 rounded-full overflow-hidden opacity-35">
+          <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+            <source src="/lovable-uploads/whiskey ATTPAC.webm" type="video/webm" />
+          </video>
+        </div>
+        
+        {/* Random positioned videos */}
+        <div className="absolute top-1/3 left-1/4 w-8 h-8 rounded-full overflow-hidden opacity-15">
+          <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+            <source src="/lovable-uploads/whiskey ATTPAC.webm" type="video/webm" />
+          </video>
+        </div>
+        
+        <div className="absolute top-2/3 right-1/3 w-12 h-12 rounded-lg overflow-hidden opacity-25">
+          <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+            <source src="/lovable-uploads/whiskey ATTPAC.webm" type="video/webm" />
+          </video>
+        </div>
+        
+        <div className="absolute top-1/2 left-3/4 w-6 h-6 rounded-full overflow-hidden opacity-20">
+          <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+            <source src="/lovable-uploads/whiskey ATTPAC.webm" type="video/webm" />
+          </video>
+        </div>
       </div>
 
       {/* Hero Content - Split Layout */}
