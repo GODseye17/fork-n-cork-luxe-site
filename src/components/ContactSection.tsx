@@ -2,6 +2,7 @@ import React from 'react';
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter } from 'lucide-react';
 import InteractiveMap from './InteractiveMap';
 import GlassSurface from './GlassSurface';
+import Squares from './Squares';
 
 const ContactSection = () => {
   const contactInfo = [
@@ -38,8 +39,19 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="min-h-screen py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="min-h-screen py-20 bg-background relative overflow-hidden">
+      {/* Animated Squares Background */}
+      <div className="absolute inset-0 opacity-20">
+        <Squares 
+          speed={0.5} 
+          squareSize={40}
+          direction="diagonal"
+          borderColor="#fff"
+          hoverFillColor="#222"
+        />
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16 scroll-reveal">
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
