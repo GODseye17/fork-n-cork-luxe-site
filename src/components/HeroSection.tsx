@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import heroImage from '@/assets/hero-restaurant.jpg';
+import MagnetLines from './MagnetLines';
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -21,64 +21,23 @@ const HeroSection = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-radial from-luxury-gold/10 via-luxury-gold/3 to-transparent rounded-full blur-3xl glow-gold"></div>
       </div>
       
-      {/* Elegant Golden Pattern Overlay */}
-      <div className="absolute inset-0 opacity-8">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 30% 40%, hsl(var(--luxury-gold)) 1px, transparent 1px), radial-gradient(circle at 70% 70%, hsl(var(--champagne)) 1px, transparent 1px)`,
-          backgroundSize: '80px 80px, 120px 120px'
-        }} />
+      {/* Magnetic Lines Background */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-20">
+        <MagnetLines 
+          rows={12}
+          columns={12}
+          containerSize="100vw"
+          lineColor="hsl(var(--luxury-gold))"
+          lineWidth="2px"
+          lineHeight="40px"
+          baseAngle={-15}
+        />
       </div>
 
       {/* Sophisticated Corner Accents */}
       <div className="absolute top-0 left-0 w-80 h-80 bg-gradient-to-br from-champagne/8 to-transparent rounded-full blur-3xl glow-burgundy"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-rich-burgundy/12 to-transparent rounded-full blur-3xl"></div>
 
-      {/* Small Whiskey Video Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Corner videos */}
-        <div className="absolute top-24 left-4 w-16 h-16 rounded-lg overflow-hidden opacity-30">
-          <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-            <source src="/lovable-uploads/whiskey ATTPAC.webm" type="video/webm" />
-          </video>
-        </div>
-        
-        <div className="absolute top-24 right-4 w-12 h-12 rounded-full overflow-hidden opacity-25">
-          <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-            <source src="/lovable-uploads/whiskey ATTPAC.webm" type="video/webm" />
-          </video>
-        </div>
-        
-        <div className="absolute bottom-20 left-8 w-14 h-14 rounded-lg overflow-hidden opacity-20">
-          <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-            <source src="/lovable-uploads/whiskey ATTPAC.webm" type="video/webm" />
-          </video>
-        </div>
-        
-        <div className="absolute bottom-32 right-12 w-10 h-10 rounded-full overflow-hidden opacity-35">
-          <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-            <source src="/lovable-uploads/whiskey ATTPAC.webm" type="video/webm" />
-          </video>
-        </div>
-        
-        {/* Random positioned videos */}
-        <div className="absolute top-1/3 left-1/4 w-8 h-8 rounded-full overflow-hidden opacity-15">
-          <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-            <source src="/lovable-uploads/whiskey ATTPAC.webm" type="video/webm" />
-          </video>
-        </div>
-        
-        <div className="absolute top-2/3 right-1/3 w-12 h-12 rounded-lg overflow-hidden opacity-25">
-          <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-            <source src="/lovable-uploads/whiskey ATTPAC.webm" type="video/webm" />
-          </video>
-        </div>
-        
-        <div className="absolute top-1/2 left-3/4 w-6 h-6 rounded-full overflow-hidden opacity-20">
-          <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-            <source src="/lovable-uploads/whiskey ATTPAC.webm" type="video/webm" />
-          </video>
-        </div>
-      </div>
 
       {/* Hero Content - Split Layout */}
       <div className="relative z-10 w-full h-full flex items-center px-4 lg:px-8">
