@@ -50,9 +50,14 @@ const ExperienceShowcase = () => {
           </h2>
           <div className="font-body text-lg max-w-3xl mx-auto leading-relaxed">
             <ShinyText 
-              text="Immerse yourself in a world where every detail is crafted to perfection. From our signature cocktails to our gourmet cuisine and live entertainment."
+              size="lg"
               speed={4}
-            />
+              className="text-foreground"
+              baseColor="hsl(var(--foreground))"
+              shineColor="hsl(var(--primary))"
+            >
+              Immerse yourself in a world where every detail is crafted to perfection. From our signature cocktails to our gourmet cuisine and live entertainment.
+            </ShinyText>
           </div>
         </div>
 
@@ -90,7 +95,15 @@ const ExperienceShowcase = () => {
                         {experience.title}
                       </h3>
                       <div className="font-body mb-4 leading-relaxed text-sm">
-                        <ShinyText text={experience.description} speed={6} />
+                        <ShinyText 
+                          size="sm"
+                          speed={6}
+                          className="text-white"
+                          baseColor="rgba(255,255,255,0.8)"
+                          shineColor="rgba(255,255,255,1)"
+                        >
+                          {experience.description}
+                        </ShinyText>
                       </div>
                       
                       {/* Features */}

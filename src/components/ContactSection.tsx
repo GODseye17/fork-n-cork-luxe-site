@@ -3,6 +3,7 @@ import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter } from 'lucide
 import InteractiveMap from './InteractiveMap';
 import GlassSurface from './GlassSurface';
 import Squares from './Squares';
+import ShinyText from './ShinyText';
 
 const ContactSection = () => {
   const contactInfo = [
@@ -57,10 +58,17 @@ const ContactSection = () => {
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
             Visit <span className="text-gradient-gold">Fork N Cork</span>
           </h2>
-          <p className="font-body text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Located in the heart of Ranchi, we're easily accessible and ready to welcome you 
-            for an unforgettable dining experience.
-          </p>
+          <div className="font-body text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <ShinyText 
+              size="lg"
+              speed={3}
+              className="text-foreground"
+              baseColor="hsl(var(--foreground))"
+              shineColor="hsl(var(--primary))"
+            >
+              Located in the heart of Ranchi, we're easily accessible and ready to welcome you for an unforgettable dining experience.
+            </ShinyText>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">

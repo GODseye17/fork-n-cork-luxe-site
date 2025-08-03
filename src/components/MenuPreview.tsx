@@ -87,10 +87,9 @@ const MenuPreview = () => {
             Our <span className="text-gradient-gold">Curated</span> Menu
           </h2>
           <div className="font-body text-lg max-w-3xl mx-auto leading-relaxed">
-            <ShinyText 
-              text="Each dish and drink is a masterpiece, carefully crafted by our culinary artists using the finest ingredients from around the world."
-              speed={4}
-            />
+            <ShinyText speed={4}>
+              Each dish and drink is a masterpiece, carefully crafted by our culinary artists using the finest ingredients from around the world.
+            </ShinyText>
           </div>
         </div>
 
@@ -139,7 +138,9 @@ const MenuPreview = () => {
                   {item.name}
                 </h3>
                 <div className="font-body mb-4 leading-relaxed text-sm">
-                  <ShinyText text={item.description} speed={6} />
+                  <ShinyText speed={6}>
+                    {item.description}
+                  </ShinyText>
                 </div>
                 <div className="text-2xl font-bold text-gradient-gold mb-6">
                   {item.price}
@@ -182,7 +183,9 @@ const MenuPreview = () => {
             </a>
           </GlassSurface>
           <div className="font-body mt-4">
-            <ShinyText text="Order online for pickup or delivery - Experience Fork N Cork at home" speed={5} />
+            <ShinyText speed={5}>
+              Order online for pickup or delivery - Experience Fork N Cork at home
+            </ShinyText>
           </div>
         </div>
       </div>

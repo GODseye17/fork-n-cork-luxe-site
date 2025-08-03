@@ -69,9 +69,14 @@ const HeroSection = () => {
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}>
               <ShinyText 
-                text="Experience luxury dining in the heart of Ranchi. Premium cocktails, gourmet cuisine, and live entertainment in an atmosphere of timeless elegance." 
+                size="lg"
                 speed={4}
-              />
+                className="text-white"
+                baseColor="rgba(255,255,255,0.9)"
+                shineColor="rgba(255,255,255,1)"
+              >
+                Experience luxury dining in the heart of Ranchi. Premium cocktails, gourmet cuisine, and live entertainment in an atmosphere of timeless elegance.
+              </ShinyText>
             </div>
 
             {/* CTA Buttons */}

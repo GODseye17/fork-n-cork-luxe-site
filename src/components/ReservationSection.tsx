@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Calendar, Clock, Users, Phone, Mail, User } from 'lucide-react';
 import Cubes from './Cubes';
 import GlassSurface from './GlassSurface';
+import ShinyText from './ShinyText';
 
 const ReservationSection = () => {
   const [formData, setFormData] = useState({
@@ -59,10 +60,17 @@ const ReservationSection = () => {
             <h2 className="font-display text-4xl md:text-5xl font-bold text-luxury-white mb-6">
               Reserve Your <span className="text-gradient-gold">Luxury</span> Experience
             </h2>
-            <p className="font-body text-lg text-luxury-white/90 mb-8 leading-relaxed">
-              Secure your table at Ranchi's most exclusive dining destination. 
-              Our team will ensure every detail of your visit exceeds expectations.
-            </p>
+            <div className="font-body text-lg text-luxury-white/90 mb-8 leading-relaxed">
+              <ShinyText 
+                size="lg"
+                speed={4}
+                className="text-luxury-white"
+                baseColor="rgba(255,255,255,0.8)"
+                shineColor="rgba(255,255,255,1)"
+              >
+                Secure your table at Ranchi's most exclusive dining destination. Our team will ensure every detail of your visit exceeds expectations.
+              </ShinyText>
+            </div>
 
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
