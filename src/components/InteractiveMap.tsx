@@ -1,160 +1,58 @@
-import React, { useEffect, useRef, useState } from 'react';
-import mapboxgl from 'mapbox-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';
-import { MapPin } from 'lucide-react';
+import React from 'react';
+import { MapPin, ExternalLink } from 'lucide-react';
 
 const InteractiveMap = () => {
-  const mapContainer = useRef<HTMLDivElement>(null);
-  const map = useRef<mapboxgl.Map | null>(null);
-  const [mapboxToken, setMapboxToken] = useState<string>('');
-  const [showTokenInput, setShowTokenInput] = useState(true);
-
-  // Fork N Cork location coordinates (approximate for Ranchi)
-  const restaurantLocation: [number, number] = [85.3240, 23.3441];
-
-  const initializeMap = (token: string) => {
-    if (!mapContainer.current || !token) return;
-
-    mapboxgl.accessToken = token;
-    
-    map.current = new mapboxgl.Map({
-      container: mapContainer.current,
-      style: 'mapbox://styles/mapbox/streets-v11',
-      center: restaurantLocation,
-      zoom: 15,
-      pitch: 45,
-      bearing: -15,
-    });
-
-    // Add navigation controls
-    map.current.addControl(
-      new mapboxgl.NavigationControl({
-        visualizePitch: true,
-      }),
-      'top-right'
-    );
-
-    // Custom marker for restaurant
-    const markerElement = document.createElement('div');
-    markerElement.className = 'custom-marker';
-    markerElement.innerHTML = `
-      <div class="w-12 h-12 bg-gradient-to-br from-accent to-accent/80 rounded-full flex items-center justify-center shadow-lg border-4 border-white animate-pulse">
-        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-        </svg>
-      </div>
-    `;
-
-    // Add marker to map
-    new mapboxgl.Marker(markerElement)
-      .setLngLat(restaurantLocation)
-      .setPopup(
-        new mapboxgl.Popup({ offset: 25 })
-          .setHTML(`
-            <div class="p-4 text-center">
-              <h3 class="font-bold text-lg mb-2">Fork N Cork</h3>
-              <p class="text-sm text-gray-600 mb-2">Premium Dining Experience</p>
-              <p class="text-xs">Main Road, Ranchi</p>
-              <a href="https://maps.app.goo.gl/bDsEiZJyYqf5SXz79" target="_blank" class="text-blue-600 text-xs underline mt-2 block">Get Directions</a>
-            </div>
-          `)
-      )
-      .addTo(map.current);
-
-    // Smooth animation on load
-    map.current.on('load', () => {
-      // Add a subtle animation
-      map.current?.flyTo({
-        center: restaurantLocation,
-        zoom: 16,
-        duration: 2000,
-        essential: true
-      });
-      
-      // Add a circle layer for location emphasis
-      map.current?.addSource('restaurant-circle', {
-        type: 'geojson',
-        data: {
-          type: 'Point',
-          coordinates: restaurantLocation
-        }
-      });
-
-      map.current?.addLayer({
-        id: 'restaurant-circle',
-        type: 'circle',
-        source: 'restaurant-circle',
-        paint: {
-          'circle-radius': 30,
-          'circle-color': 'rgba(234, 179, 8, 0.3)',
-          'circle-stroke-width': 2,
-          'circle-stroke-color': 'rgba(234, 179, 8, 0.8)'
-        }
-      });
-    });
-
-    setShowTokenInput(false);
-  };
-
-  const handleTokenSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (mapboxToken.trim()) {
-      initializeMap(mapboxToken.trim());
-    }
-  };
-
-  useEffect(() => {
-    return () => {
-      map.current?.remove();
-    };
-  }, []);
-
-  if (showTokenInput) {
-    return (
-      <div className="relative h-96 bg-muted rounded-2xl overflow-hidden border border-border/20 flex items-center justify-center">
-        <div className="text-center p-8 max-w-md">
-          <MapPin size={48} className="text-accent mx-auto mb-4" />
-          <h4 className="font-display text-xl font-semibold text-foreground mb-4">
-            Interactive Map Setup
-          </h4>
-          <p className="text-muted-foreground text-sm mb-6">
-            To display the interactive map, please enter your Mapbox public token. 
-            Get yours at <a href="https://mapbox.com/" target="_blank" rel="noopener noreferrer" className="text-accent underline">mapbox.com</a>
-          </p>
-          <form onSubmit={handleTokenSubmit} className="space-y-4">
-            <input
-              type="text"
-              placeholder="Enter Mapbox Public Token"
-              value={mapboxToken}
-              onChange={(e) => setMapboxToken(e.target.value)}
-              className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50"
-            />
-            <button
-              type="submit"
-              className="btn-primary w-full"
-              disabled={!mapboxToken.trim()}
-            >
-              Load Map
-            </button>
-          </form>
-          <p className="text-xs text-muted-foreground mt-4">
-            For production, add your token to Supabase Edge Function Secrets
-          </p>
-        </div>
-      </div>
-    );
-  }
+  // Extract coordinates from your Google Maps link for embed
+  const googleMapsEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58387.51059815085!2d85.26663!3d23.344315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4e104aa5db7dd%3A0xdc09d49d6899f43e!2sRanchi%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1654321098765!5m2!1sen!2sin";
 
   return (
-    <div className="relative h-96 bg-muted rounded-2xl overflow-hidden border border-border/20">
-      <div ref={mapContainer} className="absolute inset-0" />
-      <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-luxury-black/10 to-transparent" />
+    <div className="relative h-96 bg-muted rounded-2xl overflow-hidden border border-border/20 group">
+      {/* Google Maps Embed */}
+      <iframe
+        src={googleMapsEmbedUrl}
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        className="transition-all duration-300 group-hover:scale-105"
+        title="Fork N Cork Location"
+      />
       
-      {/* Map overlay with restaurant info */}
-      <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg">
-        <h5 className="font-semibold text-sm text-gray-800">Fork N Cork</h5>
-        <p className="text-xs text-gray-600">Main Road, Ranchi</p>
+      {/* Elegant overlay */}
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-luxury-black/10 via-transparent to-transparent" />
+      
+      {/* Restaurant info overlay */}
+      <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg animate-fade-in">
+        <div className="flex items-center space-x-2">
+          <div className="w-3 h-3 bg-accent rounded-full animate-pulse"></div>
+          <div>
+            <h5 className="font-semibold text-sm text-gray-800">Fork N Cork</h5>
+            <p className="text-xs text-gray-600">Main Road, Ranchi</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Interactive directions button */}
+      <div className="absolute bottom-4 right-4">
+        <a
+          href="https://maps.app.goo.gl/bDsEiZJyYqf5SXz79"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center space-x-2 bg-accent hover:bg-accent/90 text-white px-4 py-2 rounded-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+        >
+          <ExternalLink size={16} />
+          <span className="text-sm font-medium">Get Directions</span>
+        </a>
+      </div>
+
+      {/* Animated location indicator */}
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+        <div className="w-6 h-6 bg-accent rounded-full animate-ping opacity-75"></div>
+        <div className="absolute top-1 left-1 w-4 h-4 bg-accent rounded-full flex items-center justify-center">
+          <MapPin size={12} className="text-white" />
+        </div>
       </div>
     </div>
   );
