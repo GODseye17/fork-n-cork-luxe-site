@@ -66,7 +66,7 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Information */}
           <div className="scroll-reveal">
-            <h3 className="font-display text-2xl font-semibold text-foreground mb-8">
+            <h3 className="font-heading text-2xl font-semibold text-foreground mb-8">
               Get in Touch
             </h3>
             

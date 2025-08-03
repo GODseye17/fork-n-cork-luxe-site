@@ -76,7 +76,7 @@ const Navigation = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="block px-3 py-2 text-luxury-white hover:text-accent transition-colors duration-300 font-body font-medium"
+                className="block px-3 py-2 text-luxury-white hover:text-accent transition-colors duration-300 font-heading font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.label}

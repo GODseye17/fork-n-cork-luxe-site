@@ -137,13 +137,21 @@ Inspired by Rolex's timeless elegance and sophistication
     @apply bg-background text-foreground font-body;
   }
 
-  /* Luxury Typography Classes */
+  /* Premium Typography Classes */
   .font-display {
-    font-family: var(--font-display);
+    font-family: 'Playfair Display', serif;
   }
   
   .font-body {
-    font-family: var(--font-body);
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-heading {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .font-serif {
+    font-family: 'Cormorant Garamond', serif;
   }
 }
 
