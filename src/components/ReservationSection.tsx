@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Calendar, Clock, Users, Phone, Mail, User } from 'lucide-react';
+import Cubes from './Cubes';
 
 const ReservationSection = () => {
   const [formData, setFormData] = useState({
@@ -34,8 +35,23 @@ const ReservationSection = () => {
   const guestCounts = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10+'];
 
   return (
-    <section id="reservations" className="py-20 bg-gradient-luxury">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="reservations" className="relative py-20 bg-gradient-luxury overflow-hidden">
+      {/* Cubes Background */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-50">
+        <Cubes 
+          gridSize={8}
+          maxAngle={60}
+          radius={4}
+          borderStyle="2px dashed hsl(var(--luxury-gold))"
+          faceColor="hsl(var(--deep-charcoal))"
+          rippleColor="hsl(var(--accent))"
+          rippleSpeed={1.5}
+          autoAnimate={true}
+          rippleOnClick={true}
+        />
+      </div>
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
           <div className="scroll-reveal">
