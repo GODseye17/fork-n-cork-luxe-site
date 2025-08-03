@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 import ShinyText from './ShinyText';
+import { Button } from '@/components/ui/button';
 
 const MenuPreview = () => {
   const [activeCategory, setActiveCategory] = useState('signature');
@@ -97,17 +98,14 @@ const MenuPreview = () => {
         <div className="flex justify-center mb-12 scroll-reveal">
           <div className="bg-card/50 backdrop-blur-sm rounded-xl p-2 border border-border/20">
             {Object.entries(menuCategories).map(([key, category]) => (
-              <button
+              <Button
                 key={key}
+                variant={activeCategory === key ? "default" : "ghost"}
                 onClick={() => setActiveCategory(key)}
-                className={`px-6 py-3 rounded-lg font-body font-medium transition-all duration-300 ${
-                  activeCategory === key
-                    ? 'bg-accent text-luxury-black shadow-gold'
-                    : 'text-muted-foreground hover:text-accent'
-                }`}
+                className="font-body font-medium"
               >
                 {category.title}
-              </button>
+              </Button>
             ))}
           </div>
         </div>
@@ -138,14 +136,20 @@ const MenuPreview = () => {
                 <div className="text-2xl font-bold text-gradient-gold mb-6">
                   {item.price}
                 </div>
-                <a 
-                  href="https://forkncork.in" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="btn-outline-gold w-full text-sm"
+                <Button 
+                  asChild
+                  variant="outline"
+                  size="sm"
+                  className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                 >
-                  Order Now
-                </a>
+                  <a 
+                    href="https://forkncork.in" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    Order Now
+                  </a>
+                </Button>
               </div>
             </div>
           ))}
@@ -153,14 +157,19 @@ const MenuPreview = () => {
 
         {/* Start Ordering CTA */}
         <div className="text-center mt-16 scroll-reveal">
-          <a 
-            href="https://forkncork.in" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="btn-gold"
+          <Button 
+            asChild
+            size="lg"
+            className="bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary/80"
           >
-            Start Ordering Now
-          </a>
+            <a 
+              href="https://forkncork.in" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              Start Ordering Now
+            </a>
+          </Button>
           <div className="font-body mt-4">
             <ShinyText text="Order online for pickup or delivery - Experience Fork N Cork at home" speed={5} />
           </div>

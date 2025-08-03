@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import MagnetLines from './MagnetLines';
 import ShinyText from './ShinyText';
 import Aurora from './Aurora';
+import { Button } from '@/components/ui/button';
 
 
 const HeroSection = () => {
@@ -96,18 +97,26 @@ const HeroSection = () => {
             <div className={`flex flex-col sm:flex-row gap-4 transition-all duration-800 delay-600 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}>
-              <a 
-                href="https://forkncork.in" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="btn-gold group"
+              <Button 
+                asChild
+                size="lg"
+                className="bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary/80"
               >
-                <span className="relative z-10">Start Ordering</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-accent to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </a>
-              <button className="btn-outline-gold">
+                <a 
+                  href="https://forkncork.in" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  Start Ordering
+                </a>
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+              >
                 Reserve Your Table
-              </button>
+              </Button>
             </div>
           </div>
         </div>

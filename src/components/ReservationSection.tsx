@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Calendar, Clock, Users, Phone, Mail, User } from 'lucide-react';
 import Cubes from './Cubes';
+import { Button } from '@/components/ui/button';
 
 const ReservationSection = () => {
   const [formData, setFormData] = useState({
@@ -213,9 +214,13 @@ const ReservationSection = () => {
                   />
                 </div>
 
-                <button type="submit" className="btn-gold w-full">
+                <Button 
+                  type="submit" 
+                  size="lg"
+                  className="w-full bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary/80"
+                >
                   Reserve Your Table
-                </button>
+                </Button>
               </form>
 
               <p className="text-center text-muted-foreground text-sm mt-4">

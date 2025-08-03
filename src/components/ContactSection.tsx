@@ -1,6 +1,7 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter } from 'lucide-react';
 import InteractiveMap from './InteractiveMap';
+import { Button } from '@/components/ui/button';
 
 const ContactSection = () => {
   const contactInfo = [
@@ -79,11 +80,15 @@ const ContactSection = () => {
                        >
                          {info.action} →
                        </a>
-                     ) : (
-                       <button className="text-accent hover:text-accent/80 font-medium text-sm mt-2 transition-colors duration-300">
-                         {info.action} →
-                       </button>
-                     )}
+                      ) : (
+                        <Button 
+                          variant="ghost" 
+                          size="sm"
+                          className="h-auto p-0 text-accent hover:text-accent/80 font-medium text-sm mt-2"
+                        >
+                          {info.action} →
+                        </Button>
+                      )}
                   </div>
                 </div>
               ))}
