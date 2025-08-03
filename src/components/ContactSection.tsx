@@ -2,6 +2,7 @@ import React from 'react';
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter } from 'lucide-react';
 import InteractiveMap from './InteractiveMap';
 import GlassSurface from './GlassSurface';
+import GridDistortion from './GridDistortion';
 
 const ContactSection = () => {
   const contactInfo = [
@@ -38,8 +39,21 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="relative py-20 overflow-hidden">
+      {/* Grid Distortion Background */}
+      <div className="absolute inset-0">
+        <GridDistortion
+          imageSrc="https://picsum.photos/1920/1080?grayscale"
+          grid={10}
+          mouse={0.1}
+          strength={0.15}
+          relaxation={0.9}
+          className="opacity-30"
+        />
+      </div>
+      
+      {/* Content overlay */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 scroll-reveal">
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
