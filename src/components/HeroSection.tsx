@@ -43,7 +43,7 @@ const HeroSection = () => {
                     muted 
                     playsInline
                   >
-                    <source src="/lovable-uploads/Logo_Dance_Video_Generation.mp4" type="video/mp4" />
+                    <source src="/assets/logo-animation.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                   {/* Inner Glow Effect */}

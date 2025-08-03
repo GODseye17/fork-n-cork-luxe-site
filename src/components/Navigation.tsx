@@ -33,7 +33,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <img 
-              src="/lovable-uploads/bc1c71f1-5fc1-42c8-a921-e17c7de3801f.png" 
+              src="/assets/fork-n-cork-logo.png" 
               alt="Fork N Cork" 
               className="h-8 w-auto transition-all duration-300 hover:scale-105"
             />

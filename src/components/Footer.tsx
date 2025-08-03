@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="py-16 grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="md:col-span-2">
-            <img src="/lovable-uploads/bc1c71f1-5fc1-42c8-a921-e17c7de3801f.png" alt="Fork N Cork" className="h-16 w-auto mb-6" />
+            <img src="/assets/fork-n-cork-logo.png" alt="Fork N Cork" className="h-16 w-auto mb-6" />
             <p className="font-body text-luxury-white/80 leading-relaxed mb-6 max-w-md">
               Fork N Cork is a family-owned restaurant specializing in delicious comfort food and barbecue dishes. Our mission is to provide a warm and welcoming atmosphere for our guests to enjoy hearty meals made with quality ingredients. With a passion for good food and great service, we strive to create a memorable dining experience for all who visit us.
             </p>
