@@ -79,7 +79,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Side - Content */}
-          <div className={`flex flex-col justify-center transition-all duration-800 delay-200 order-1 lg:order-2 ${
+          <div className={`flex flex-col justify-center items-center lg:items-start text-center lg:text-left transition-all duration-800 delay-200 order-1 lg:order-2 ${
             isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
           }`}>
             {/* Tagline */}
