@@ -10,16 +10,16 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Enhanced Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-luxury-black via-primary/30 to-luxury-black" />
+      {/* Toned Down Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-luxury-black via-primary/15 to-luxury-black" />
       
       {/* Radial Glow Effect Behind Logo */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-radial from-accent/20 via-accent/5 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-radial from-accent/10 via-accent/2 to-transparent rounded-full blur-3xl"></div>
       </div>
       
       {/* Elegant Pattern Overlay */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
           backgroundImage: `radial-gradient(circle at 30% 40%, hsl(var(--champagne-gold)) 1px, transparent 1px), radial-gradient(circle at 70% 70%, hsl(var(--champagne-gold)) 1px, transparent 1px)`,
           backgroundSize: '60px 60px, 80px 80px'
@@ -27,8 +27,8 @@ const HeroSection = () => {
       </div>
 
       {/* Subtle Corner Accents */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-accent/10 to-transparent rounded-full blur-2xl"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tl from-primary/20 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-accent/5 to-transparent rounded-full blur-2xl"></div>
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tl from-primary/10 to-transparent rounded-full blur-3xl"></div>
 
       {/* Premium Floating Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -55,19 +55,26 @@ const HeroSection = () => {
             isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
           }`}>
             <div className="relative w-full max-w-sm aspect-square overflow-hidden">
-              {/* Logo Video */}
-              <video 
-                className="w-full h-full rounded-2xl border-2 border-accent/30 object-cover scale-110"
-                autoPlay 
-                loop 
-                muted 
-                playsInline
-              >
-                <source src="/lovable-uploads/Logo_Dance_Video_Generation.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              {/* Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-accent/20 rounded-2xl blur-xl -z-10"></div>
+              {/* Glossy Border Container */}
+              <div className="relative p-1 rounded-3xl bg-gradient-to-br from-accent/60 via-luxury-white/40 to-accent/60 shadow-elegant">
+                <div className="relative rounded-[20px] overflow-hidden bg-gradient-to-br from-luxury-black/20 to-luxury-black/40 backdrop-blur-sm">
+                  {/* Logo Video */}
+                  <video 
+                    className="w-full h-full object-cover scale-110"
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline
+                  >
+                    <source src="/lovable-uploads/Logo_Dance_Video_Generation.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                  {/* Inner Glow Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-accent/10 via-transparent to-accent/10 rounded-[20px]"></div>
+                </div>
+              </div>
+              {/* Outer Glow Effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-accent/20 rounded-3xl blur-xl -z-10"></div>
             </div>
           </div>
 
