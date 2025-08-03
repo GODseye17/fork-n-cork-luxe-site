@@ -48,7 +48,7 @@ const HeroSection = () => {
           <img 
             src="/lovable-uploads/34166426-3355-4279-b5e2-8d2e78fb6cb4.png" 
             alt="Fork N Cork" 
-            className="h-24 md:h-32 w-auto mx-auto mb-6"
+            className="h-24 md:h-32 w-auto mx-auto mb-6 opacity-90 mix-blend-screen filter brightness-110 contrast-110"
           />
         </div>
 

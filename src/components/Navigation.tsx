@@ -35,7 +35,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/2fb48a47-9fb9-4cae-8e0e-08e758fb099b.png" 
               alt="Fork N Cork" 
-              className="h-12 w-auto"
+              className="h-12 w-auto opacity-95 filter brightness-110"
             />
           </div>
 
