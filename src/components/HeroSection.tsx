@@ -33,13 +33,13 @@ const HeroSection = () => {
       {/* Small Whiskey Video Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Corner videos */}
-        <div className="absolute top-4 left-4 w-16 h-16 rounded-lg overflow-hidden opacity-30">
+        <div className="absolute top-24 left-4 w-16 h-16 rounded-lg overflow-hidden opacity-30">
           <video autoPlay loop muted playsInline className="w-full h-full object-cover">
             <source src="/lovable-uploads/whiskey ATTPAC.webm" type="video/webm" />
           </video>
         </div>
         
-        <div className="absolute top-4 right-4 w-12 h-12 rounded-full overflow-hidden opacity-25">
+        <div className="absolute top-24 right-4 w-12 h-12 rounded-full overflow-hidden opacity-25">
           <video autoPlay loop muted playsInline className="w-full h-full object-cover">
             <source src="/lovable-uploads/whiskey ATTPAC.webm" type="video/webm" />
           </video>
