@@ -37,7 +37,7 @@ const ReservationSection = () => {
   return (
     <section id="reservations" className="relative py-20 bg-gradient-luxury overflow-hidden">
       {/* Cubes Background */}
-      <div className="absolute inset-0 flex items-center justify-start opacity-50">
+      <div className="absolute inset-0 flex items-center justify-start opacity-20">
         <Cubes 
           gridSize={8}
           maxAngle={60}
